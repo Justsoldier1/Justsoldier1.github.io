@@ -1,0 +1,72 @@
+<!DOCTYPE html> <i -- shows that version is used --></i>
+<html lang="en">
+<head> <i -- metadata --></i>
+    <meta charset="UTF-8"> <i -- character set --></i>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <i -- where content will be displayed --></i>
+
+    <i-- button to return to the live home page --></i-->
+    <a href ="index.html">
+        <button> live home page</button>
+    </a>
+    
+    <i -- content with two crocodile brackets are tags, changing the visuals of the content --></i>
+    <i -- opening tags need a slash before their identifier --></i>
+    <i -- p is paragraph, and h1 is a header --></i>
+    <h1> header </h1>
+    <p> paragraph text</p>
+    
+    <i-- div is a different section of the web page --></i-->
+    <i -- button --></i>
+    <div> 
+         
+         <i -- a marks the beginning of a hyperlink --></i>
+         <i -- attributes can be given in the open tag, giving value to the content --> </i>
+         <i -- to open this link in another tab, the attribute target can be used, with _blank opening in a new tab. --></i>
+         <i -- the rel attribute is also used in this case to determine the relationship between the new tab and the current tab. noopener stops manipulation of the original tab. --></i>
+         <i -- another rel attribute is noreferrer, which hides the domain of the website that opened the new tab, which is used for security reasons --></i>
+
+         <i -- absolute links (which contain the protocol and the domain name) are used for opening other websites --></i> 
+         <i -- while relative links (page.html is only needed) open pages in this website --></i>
+
+         <i -- the a tag surrounds the button, meaning the button opens the hyperlink --></i>
+         <a href="https://www.youtube.com/@justsoldier_">
+            <button> click to view youtube</button>
+         </a>
+
+         <a href="info.html">
+            <button> info about me</button>
+         </a>
+
+    </div>
+
+    <i -- image --></i>
+    <div>
+
+        <i -- img is a tag that displays an image --></i>
+        <i -- img is a self closing tag, meaning it does not need a closing tag, but cannot have content outside of attributes --></i>
+        <i -- scr is an attributes that determines the source of an element. This can be relative or absolute --></i>
+        <i -- alt is text that is displayed when the element cannot be loaded, or is read when a screen reader is used --></i>
+        <i -- the size of an image can be set using the width and height tags --></i>
+        <img src="./Resources/Images/Staffs logo.png" alt = "Logo for staffs uni" height = "500" width = "750">
+
+    </div>
+
+    <i -- form --></i-->
+    <i -- style changes how the element looks. margin is a style parameter that can change the distance the element is from the previous element --></i>
+    <i -- the distance can be set in certain intervals, such as pixels, or px, but I used em here as it is relative to the font size --></i>
+    <div style = "margin-top: 2em">
+        <i -- forms send information to a server --></i>
+        <i -- labels describe a form. the for attribute can be used to describe what form this is describing--></i>
+        <i -- input takes input, and is a self closing tag --></i>
+        <form>
+            <label for="input" style = "font-style: normal">Type something</label>
+            <input type ="text" name = "input">
+            <button type = "submit">submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
