@@ -50,12 +50,13 @@
 
     <i -- form --></i-->
     <i -- style changes how the element looks. margin is a style parameter that can change the distance the element is from the previous element --></i>
-    <div style = "margin-top: 5em">
+    <i -- the distance can be set in certain intervals, such as pixels, or px, but I used em here as it is relative to the font size --></i>
+    <div style = "margin-top: 2em">
         <i -- forms send information to a server --></i>
         <i -- labels describe a form. the for attribute can be used to describe what form this is describing--></i>
         <i -- input takes input, and is a self closing tag --></i>
         <form>
-            <label for="input">Type something</label>
+            <label for="input" style = "font-style: normal">Type something</label>
             <input type ="text" name = "input">
             <button type = "submit">submit</button>
         </form>
