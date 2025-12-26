@@ -176,11 +176,11 @@
         </table>
 
     </div>
-    
+
     <div style="margin-top:5em">
         <h1>Javascript</h1>
 
-        <button onclick="ChangeText()">Functionality</button>
+        <button onclick="ChangeText()">Clicked</button>
 
          <p id="Text">Test</p>
 
@@ -190,6 +190,20 @@
 
                 document.getElementById("Text").innerHTML = "Dead";
             }
+        </script>
+
+        <button ondragover="HoverText()" ondragend="StopHoverText()">Hovered</button>
+
+        <p id="HoverText">Not hovered</p>
+
+        <script>
+            function HoverText(){
+                document.getElementById("HoverText").innerHTML = "Hovered";
+            }
+            function StopHoverText(){
+                document.getElementById("HoverText").innerHTML = "Not hovered";
+            }
+
         </script>
 
     </div>
