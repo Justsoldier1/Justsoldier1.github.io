@@ -1,9 +1,1 @@
 This is my portfolio
-
-<i-- title is a popup that shows when the text is hovered over --></i-->
-    <a style = "font-weight: bolder" title="My about page">Tyler Gledhill</a>
-    <i-- should work as a link to projects page or section when that is added--></i-->
-    <a style = "margin-left:5em" title="My projects"> projects</a>
-    <i-- this will be a link to my linktree when I create one and make proffesional social media pages--></i-->
-    <a style = "margin-left:3em" title="My linktree"> My socials</a>
-    <a style = "margin-left: 3em" href="mailto:whattyler@outlook.com" target = "_blank" rel ="noopener noreferrer"> contact me</a>
