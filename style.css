@@ -4,7 +4,7 @@ body{
     font-family: montserrat;
 }
 
-header{
+div.header{
     margin-top:2em;
     background-color:grey;
 }
