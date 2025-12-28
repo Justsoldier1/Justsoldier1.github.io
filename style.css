@@ -4,11 +4,16 @@ body{
     font-family: montserrat;
 }
 
+div.temp{
+    background-color:grey;
+    color:white;
+}
+
 div.header{
     margin-top:2em;
     background-color:grey;
     height: 50px;
-    align-items: center;
+    align: center;
 }
 
 tr.headercontents{
