@@ -8,10 +8,6 @@ header{
     margin-top:2em;
 }
 
-table.headertable{
-    background-color:black;
-}
-
 tr.headercontents{
     background-color:grey;
     color:white;
