@@ -10,7 +10,6 @@ div.temp{
 }
 
 div.header{
-    margin-top:2em;
     background-color:grey;
     height: 50px;
     align: center;
@@ -19,7 +18,7 @@ div.header{
 tr.headercontents{
     color:white;
     width: 100px;
-    align-content: center;
+    align: center;
 }
 
 td.AboutLink{
