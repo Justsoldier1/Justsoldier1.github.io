@@ -5,12 +5,12 @@ body{
 }
 
 div.temp{
-    background-color:grey;
+    background-color:linear-gradient(lightgrey,grey);
     color:white;
 }
 
 div.header{
-    background-color:grey;
+    background-color:linear-gradient(grey,darkgrey);
     height: 50px;
     align: center;
 }
