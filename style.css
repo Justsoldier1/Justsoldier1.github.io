@@ -24,3 +24,8 @@ tr.headercontents{
 td.AboutLink{
     font-style:bolder;
 }
+
+a.ClearWhiteAnchor{
+    color:white;
+    text-decoration: none;
+}
