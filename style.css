@@ -2,7 +2,7 @@ body{
     background:linear-gradient(grey,darkgrey);
     background-repeat: no-repeat;
     color: white;
-    font-family: montserrat;
+    font-family: "montserrat";
 }
 
 div.header{
