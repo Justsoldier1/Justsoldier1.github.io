@@ -30,3 +30,9 @@ body{
     padding: 3em;
     text-align: center;
 }
+
+.Border{
+    border-style:solid;
+    border-radius: 5px;
+    border-color:black;
+}
