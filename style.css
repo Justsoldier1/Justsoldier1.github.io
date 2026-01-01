@@ -26,12 +26,12 @@ a.ClearWhiteAnchor{
 }
 
 tr.ProjectTable{
-    align: center;
     width: 200px;
+    align: center;
 }
 
 tr.DescriptionRow{
-    align: center;
     width: 200px;
     padding: 3em;
+      align: center;
 }
