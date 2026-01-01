@@ -25,13 +25,13 @@ a.ClearWhiteAnchor{
     text-decoration: none;
 }
 
-tr.ProjectTable{
+.ProjectTable{
     width: 200px;
     align: center;
 }
 
-tr.DescriptionRow{
+.DescriptionRow{
     width: 200px;
     padding: 3em;
-      align: center;
+    align: center;
 }
