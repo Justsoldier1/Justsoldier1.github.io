@@ -6,8 +6,8 @@ window.addEventListener('load', function(){
     header.innerHTML = `
     <table class="headertable">
         <tr class="headercontents">
-            <td class ="AboutLink"><a href="#about" class="ClearWhiteAnchor">Tyler Gledhill</a></td>
-            <td><a href="#projects" class="ClearWhiteAnchor">Projects</a></td>
+            <td class ="AboutLink"><a href="/index.html#about" class="ClearWhiteAnchor">Tyler Gledhill</a></td>
+            <td><a href="/index.html#projects" class="ClearWhiteAnchor">Projects</a></td>
             <td><a title="Linktree for Tyler Gledhill" class="ClearWhiteAnchor">My socials</a></td>
             <td><a href="mailto:whattyler@outlook.com" title="Email me" target="_blank" rel="noopener noreferrer" class="ClearWhiteAnchor">Contact me</a></td>
         </tr>
