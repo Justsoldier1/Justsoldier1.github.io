@@ -7,13 +7,12 @@ body{
 
 div.header{
     height: 50px;
-    align: center;
 }
 
 tr.headercontents{
     width: 350px;
-    padding:5px;
-    align: center;
+    padding:10px;
+    text-align: center;
 }
 
 td.AboutLink{
