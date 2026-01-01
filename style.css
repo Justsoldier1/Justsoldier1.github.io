@@ -24,3 +24,14 @@ a.ClearWhiteAnchor{
     color:white;
     text-decoration: none;
 }
+
+tr.ProjectTable{
+    align: center;
+    width: 200px;
+}
+
+tr.DescriptionRow{
+    align: center;
+    width: 200px;
+    padding: 3em;
+}
