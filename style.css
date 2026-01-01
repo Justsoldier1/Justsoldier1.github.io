@@ -36,3 +36,11 @@ body{
     border-radius: 5px;
     border-color:black;
 }
+
+.BorderedTable{
+    background-color: black;
+}
+
+.WhiteTable{
+    color:white;
+}
