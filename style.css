@@ -27,11 +27,11 @@ a.ClearWhiteAnchor{
 
 .ProjectTable{
     width: 200px;
-    align-item: center;
+    text-align: center;
 }
 
 .DescriptionRow{
     width: 200px;
     padding: 3em;
-    align-items: center;
+    text-align: center;
 }
