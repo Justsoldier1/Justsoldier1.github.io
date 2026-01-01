@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(grey,darkgrey);
+    background:radial-gradient(grey,darkgrey);
     background-repeat: no-repeat;
     color: white;
     font-family: "montserrat";
