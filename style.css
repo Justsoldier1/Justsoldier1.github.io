@@ -37,6 +37,7 @@ body{
     border-color:black;
     border-width:inherit;
     height: auto;
+    display:block;
 }
 
 .BorderedTable{
