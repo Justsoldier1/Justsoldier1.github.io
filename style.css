@@ -6,11 +6,6 @@ body{
 }
 
 .headercontents{
-    background-color:cyan;
-    border:2px;
-    border-style:solid;
-    border-radius:5px;
-    border-color:lightgray;
     width: 350px;
     padding:5em;
     text-align: center;
@@ -48,9 +43,13 @@ body{
 }
 
 .CyanTable{
-    background:cyan;
+    background:cadetblue;
     border:2px;
     border-style:solid;
     border-radius: 5px;
     border-color:lightgray;
+}
+
+.header > .Border{
+    background:cadetblue;
 }
