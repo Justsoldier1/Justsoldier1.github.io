@@ -27,6 +27,7 @@ body{
 
 .DescriptionRow{
     text-align: center;
+    padding:0px;
 }
 
 .Border{
@@ -54,4 +55,5 @@ body{
     border-style:solid;
     border-radius: 5px;
     border-color:lightgray;
+    height:5em;
 }
