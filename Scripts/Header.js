@@ -12,6 +12,5 @@ window.addEventListener('load', function(){
             <td><a href="mailto:whattyler@outlook.com" title="Email me" target="_blank" rel="noopener noreferrer" class="ClearWhiteAnchor">Contact me</a></td>
         </tr>
     </table>
-    <hr>
     `;
 });
