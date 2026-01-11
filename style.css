@@ -57,6 +57,7 @@ body{
     border-color:lightgray;
     height:3em;
     text-align:center;
+    padding:none;
 }
 
 .headertable{
