@@ -1,5 +1,5 @@
 body{
-    background:radial-gradient(grey,darkgrey);
+    background:#202126;
     background-repeat: no-repeat;
     color: white;
     font-family: "montserrat";
@@ -35,7 +35,7 @@ body{
     border:2px;
     border-style:solid;
     border-radius: 5px;
-    border-color:black;
+    border-color:lightgray;
 }
 
 .BorderedTable{
@@ -44,4 +44,8 @@ body{
 
 .CyanTable{
     background-color:cyan;
+    border:2px;
+    border-style:solid;
+    border-radius: 5px;
+    border-color:lightgray;
 }
