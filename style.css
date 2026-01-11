@@ -26,8 +26,6 @@ body{
 }
 
 .DescriptionRow{
-    width: 200px;
-    padding: 3em;
     text-align: center;
 }
 
@@ -50,6 +48,10 @@ body{
     border-color:lightgray;
 }
 
-.header > .Border{
+.header{
     background:cadetblue;
+    border:2px;
+    border-style:solid;
+    border-radius: 5px;
+    border-color:lightgray;
 }
