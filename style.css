@@ -1,5 +1,6 @@
 body{
-    background:#202126;
+    /*background:#202126;*/
+    background:radial-gradient(#202126,#373D40,#4B5958);
     background-repeat: no-repeat;
     color: white;
     font-family: "montserrat";
@@ -13,6 +14,7 @@ body{
 
 .AboutLink{
     font-weight: bolder;
+    font-size:large;
 }
 
 .ClearWhiteAnchor{
