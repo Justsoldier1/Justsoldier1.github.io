@@ -67,3 +67,21 @@ body{
 .headertable{
     height:inherit;
 }
+
+.Dropdown button{
+
+    background:#045a8b;
+    border:2px;
+    border-style:solid;
+    border-radius:5px;
+    border-color:lightgray;
+    cursor:pointer;
+}
+
+.Dropdown .Content{
+    opacity: 0;
+}
+
+.Dropdown:hover .Content{
+    opacity:1;
+}
