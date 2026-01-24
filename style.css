@@ -17,7 +17,7 @@ body{
     font-size:large;
 }
 
-.AboutLink:hover{
+A.AboutLink:hover{
     font-size:larger;
     animation:forwards;
 }
@@ -25,6 +25,11 @@ body{
 .ClearWhiteAnchor{
     color:white;
     text-decoration: none;
+}
+
+a.ClearWhiteAnchor:hover{
+    font-size:larger;
+    animation:forwards;
 }
 
 .ProjectTable{
