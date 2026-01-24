@@ -5,5 +5,5 @@ function ClickDropdown(){
     }else{
         document.getElementById("DropdownElement").innerHTML = "JS";
     }
-    !clicked;
+    clicked = !clicked;
 }
