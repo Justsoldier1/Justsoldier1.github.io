@@ -12,7 +12,7 @@ body{
     text-align: center;
 }
 
-.headercontents:hover{
+td.headercontents:hover{
     font-size:larger;
     animation:forwards;
 }
