@@ -12,14 +12,14 @@ body{
     text-align: center;
 }
 
-a.headercontents:hover{
-    font-size:larger;
-    animation:forwards;
-}
-
 .AboutLink{
     font-weight: bolder;
     font-size:large;
+}
+
+.AboutLink:hover{
+    font-size:larger;
+    animation:forwards;
 }
 
 .ClearWhiteAnchor{
