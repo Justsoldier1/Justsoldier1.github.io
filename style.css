@@ -19,17 +19,30 @@ body{
 
 A.AboutLink:hover{
     font-size:larger;
-    animation:forwards;
+    animation:NormalHover;
+    animation-duration:0.25s;
 }
 
 .ClearWhiteAnchor{
+    font-size:normal;
     color:white;
     text-decoration: none;
 }
 
 a.ClearWhiteAnchor:hover{
     font-size:larger;
-    animation:forwards;
+    animation:LargeHover;
+    animation-duration:0.25s;
+}
+
+@keyframes NormalHover{
+    from{font-size:normal;}
+    to{font-size:larger;}
+}
+
+@keyframes LargeHover{
+    from{font-size:large;}
+    to{font-size:larger;}
 }
 
 .ProjectTable{
