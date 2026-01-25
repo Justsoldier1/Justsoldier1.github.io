@@ -68,14 +68,8 @@ a.ClearWhiteAnchor:hover{
 }
 
 @keyframes ImageHovering{
-    from{
-        height:100%;
-        width:100%
-    }
-    to{
-        height:125%;
-        width:125%;
-    }
+    from{transform: scale(1,1);}
+    to{trasnform:scale(1.25,1.25)}
 }
 
 .ProjectTable{
