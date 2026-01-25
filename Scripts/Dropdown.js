@@ -1,9 +1,10 @@
 var clicked = false;
 function ClickDropdown(){
+    var element = document.getElementById("DropdownElement");
     if(clicked){
-        document.getElementById("DropdownElement").innerHTML = "Dumb";
+        element.style.display = "block";
     }else{
-        document.getElementById("DropdownElement").innerHTML = "JS";
+        element.style.display = "none";
     }
     clicked = !clicked;
 }
