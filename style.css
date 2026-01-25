@@ -70,8 +70,17 @@ a.ClearWhiteAnchor:hover{
 }
 
 @keyframes ImageHovering{
-    from{transform: scale(1,1);}
-    to{trasnform:scale(1.25,1.25)}
+    from{
+        transform: scale(1,1);
+        border-width:0px;
+        border-radius:0px;
+    }
+
+    to{
+        transform:scale(1.25,1.25);
+        border-width:2px;
+        border-radius:5px;
+    }
 }
 
 .ProjectTable{
