@@ -120,16 +120,11 @@ a.ClearWhiteAnchor:hover{
     height:inherit;
 }
 
-.Dropdown button{
-
-    background:#045a8b;
-    border:2px;
-    border-style:solid;
-    border-radius:5px;
-    border-color:lightgray;
-    cursor:pointer;
-}
-
 .Dropdown .Content{
     display:none;
+}
+
+.DropdownTitle{
+    background:#045a8b;
+    width:35em;
 }
