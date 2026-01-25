@@ -52,7 +52,14 @@
                         I wanted to avoid casts as these can be very expensive when it comes to memory usage, with it loading
                         the actor it is connecting to into memory when it may not be necessary.
                         <small>Memory usage difference between casting and interfaces</small>
-                        <image src="/Resources/Images/Casting and interfaceMemory.png"></image>
+                        <image src="/Resources/Images/Casting and interfaceMemory.png" width="100" height="100"></image>
+                        This can be seen best within my BP_Button actor, which holds an array of actor references. This reference
+                        is as high level as possible, meaning that it can be expanded to work with any object that inherits
+                        from the actor class. Since these references are higher level, they do not load in the object stored
+                        directly, resulting in an increase in memory, and make the code a lot more expandable.
+                        These references, when the button is activated, are then used as the actor reference for an interface,
+                        which will run a function inside of their code without loading it into memory if it does not exist. An
+                        example of where I used this is within the door actor, which is opened when the 
                 </td></tr>
         </table>
     </div>
