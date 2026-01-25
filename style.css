@@ -18,9 +18,16 @@ body{
 }
 
 A.AboutLink:hover{
-    font-size:larger;
     animation:NormalHover;
     animation-duration:0.25s;
+    animation-fill-mode:forwards;
+}
+
+A.AboutLink:hover{
+    animation:NormalHover;
+    animation-duration:0.25s;
+    animation-direction:backwards;
+    animation-fill-mode:backwards;
 }
 
 .ClearWhiteAnchor{
@@ -30,20 +37,29 @@ A.AboutLink:hover{
 }
 
 a.ClearWhiteAnchor:hover{
-    font-size:larger;
     animation:LargeHover;
     animation-duration:0.25s;
+    animation-fill-mode: forwards;
+}
+
+.ClearWhiteAnchor:not(:hover){
+    animation:LargeHover;
+    animation-duration:0.25s;
+    animation-direction:backwards;
+    animation-fill-mode:backwards;
 }
 
 .HoverAnim:hover{
     animation:NormalHover;
     animation-duration:0.25s;
+    animation-fill-mode:forwards;
 }
 
 .HoverAnim:not(:hover){
     animation:NormalHover;
     animation-duration:0.25s;
     animation-direction:reverse;
+    animation-fill-mode:backwards;
 }
 
 .ImageHover:hover{
@@ -66,12 +82,14 @@ a.ClearWhiteAnchor:hover{
         transform: scale(1,1);
         border-width:0px;
         border-radius:0px;
+        border-color:lightgray;
     }
 
     to{
         transform:scale(1.25,1.25);
         border-width:2px;
         border-radius:5px;
+        border-color:lightgray;
     }
 }
 
@@ -122,10 +140,10 @@ a.ClearWhiteAnchor:hover{
 }
 
 .Dropdown .Content{
-    display:none;
     border:2px;
     border-radius:5px;
     border-color:lightgray;
+    display:none;
 }
 
 .DropdownTitle{
