@@ -46,8 +46,14 @@
     <i-- info dropdowns--></i-->
     <div>
         <table class="DropdownTable">
-                <tr><td><button onclick="ClickDropdown()" class="DropdownTitle">Code</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">This project was coded in blueprint</td></tr>
+                <tr><td><button onclick="ClickDropdown()" class="DropdownTitle">Design patterns</button></td></tr>
+                <tr><td id = "DropdownElement" class = "content">
+                        A big focus within this project was to keep everything event based, and to avoid any usage of casts.
+                        I wanted to avoid casts as these can be very expensive when it comes to memory usage, with it loading
+                        the actor it is connecting to into memory when it may not be necessary.
+                        <small>Memory usage difference between casting and interfaces</small>
+                        <image src="/Resources/Images/Casting and interfaceMemory.png"></image>
+                </td></tr>
         </table>
     </div>
 
