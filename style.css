@@ -163,7 +163,7 @@ a.ClearWhiteAnchor:hover{
     height:inherit;
 }
 
-.Dropdown .Content{
+.content{
     background: color #045a8b;
     border-style:solid;
     border:2px;
