@@ -70,12 +70,17 @@ a.ClearWhiteAnchor:hover{
 
 .ImageHover:hover{
     transform:scale(1.1,1.1);
+    border-width:2px;
+    border-radius:5px;
+    border-color:lightgray;
     animation:ImageHovering;
     animation-duration:0.25s;
 }
 
 .ImageHover:not(:hover){
     transform:scale(1,1);
+    border-width:0px;
+    border-radius:0px;
     animation:ImageHovering;
     animation-duration:0.25s;
     animation-direction:reverse;
