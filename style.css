@@ -51,12 +51,13 @@ a.ClearWhiteAnchor:hover{
     animation-duration:0.25s;
 }
 
+/*
 .ImageHover:not(:hover){
     animation:ImageHovering;
     animation-duration:0.25s;
     animation-direction:reverse;
 }
-
+*/
 @keyframes NormalHover{
     from{font-size:normal;}
     to{font-size:larger;}
