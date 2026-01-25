@@ -18,15 +18,17 @@ body{
 }
 
 A.AboutLink:hover{
+    font-size:larger;
     animation:NormalHover;
     animation-duration:0.25s;
     animation-fill-mode:forwards;
 }
 
 A.AboutLink:hover{
+    font-size:large;
     animation:NormalHover;
     animation-duration:0.25s;
-    animation-direction:backwards;
+    animation-direction:reverse;
     animation-fill-mode:backwards;
 }
 
@@ -37,25 +39,29 @@ A.AboutLink:hover{
 }
 
 a.ClearWhiteAnchor:hover{
+    font-size:larger;
     animation:LargeHover;
     animation-duration:0.25s;
     animation-fill-mode: forwards;
 }
 
 .ClearWhiteAnchor:not(:hover){
+    font-size:normal;
     animation:LargeHover;
     animation-duration:0.25s;
-    animation-direction:backwards;
+    animation-direction:reverse;
     animation-fill-mode:backwards;
 }
 
 .HoverAnim:hover{
+    font-size:normal;
     animation:NormalHover;
     animation-duration:0.25s;
     animation-fill-mode:forwards;
 }
 
 .HoverAnim:not(:hover){
+    font-size:larger;
     animation:NormalHover;
     animation-duration:0.25s;
     animation-direction:reverse;
@@ -63,8 +69,17 @@ a.ClearWhiteAnchor:hover{
 }
 
 .ImageHover:hover{
+    transform:scale(1.25,1.25);
     animation:ImageHovering;
     animation-duration:0.25s;
+}
+
+.ImageHover:not(:hover){
+    transform:scale(1,1);
+    animation:ImageHovering;
+    animation-duration:0.25s;
+    animation-direction:reverse;
+    animation-fill-mode:backwards;
 }
 
 @keyframes NormalHover{
