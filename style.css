@@ -58,6 +58,7 @@ a.ClearWhiteAnchor:hover{
     animation-direction:reverse;
 }
 */
+
 @keyframes NormalHover{
     from{font-size:normal;}
     to{font-size:larger;}
@@ -130,9 +131,5 @@ a.ClearWhiteAnchor:hover{
 }
 
 .Dropdown .Content{
-    opacity: 0;
-}
-
-.Dropdown:hover .Content{
-    opacity:1;
+    display:none;
 }
