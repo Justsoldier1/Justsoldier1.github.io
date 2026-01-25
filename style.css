@@ -43,7 +43,18 @@ a.ClearWhiteAnchor:hover{
 .HoverAnim:not(:hover){
     animation:NormalHover;
     animation-duration:0.25s;
-    animation-direction:alternate;
+    animation-direction:reverse;
+}
+
+.ImageHover:hover{
+    animation:ImageHovering;
+    animation-duration:0.25s;
+}
+
+.ImageHover:not(:hover){
+    animation:ImageHovering;
+    animation-duration:0.25s;
+    animation-direction:reverse;
 }
 
 @keyframes NormalHover{
@@ -54,6 +65,17 @@ a.ClearWhiteAnchor:hover{
 @keyframes LargeHover{
     from{font-size:large;}
     to{font-size:larger;}
+}
+
+@keyframes ImageHovering{
+    from{
+        height:100%;
+        width:100%
+    }
+    to{
+        height:125%;
+        width:125%;
+    }
 }
 
 .ProjectTable{
