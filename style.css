@@ -131,9 +131,21 @@ a.ClearWhiteAnchor:hover{
 
 .Dropdown .Content{
     display:none;
+    border:2px;
+    border-radius:5px;
+    border-color:lightgray;
 }
 
 .DropdownTitle{
     background:#045a8b;
     width:35em;
+    border:2px;
+    border-radius:5px;
+    border-color:lightgray;
+}
+
+.DropdownTable{
+    border:2px;
+    border-radius:5px;
+    border-color:lightgrey;
 }
