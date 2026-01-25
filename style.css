@@ -35,6 +35,17 @@ a.ClearWhiteAnchor:hover{
     animation-duration:0.25s;
 }
 
+.HoverAnim:hover{
+    animation:NormalHover;
+    animation-duration:0.25s;
+}
+
+.HoverAnim:not(:hover){
+    animation:NormalHover;
+    animation-duration:0.25s;
+    animation-direction:alternate;
+}
+
 @keyframes NormalHover{
     from{font-size:normal;}
     to{font-size:larger;}
