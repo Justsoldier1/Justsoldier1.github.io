@@ -6,6 +6,7 @@ std::string paragraph;
 int breakpoint = 0;
 std::string breaksyntax;
 std::string space = " ";
+bool skipnospaces = false;
 int main()
 {
     std::cout << "Example paragraph: " << examplepara << "\n";
@@ -16,6 +17,8 @@ int main()
     std::cin >> breakpoint;
     std::cout << "\nEnter the break syntax: ";
     std::cin >> breaksyntax;
+    std::cout << "\nShould chars with no spaces be skipped? \n Enter response here: ";
+    std::cin >> skipnospaces;
     std::cout << "\n";
     int iterator = 0;
     for (int i = 0; i < paragraph.length(); i++) {
@@ -23,16 +26,15 @@ int main()
         if (iterator > breakpoint) {
             std::cout << "iterator is greater than breakpoint. Iterator: " << iterator << "Breakpoint: " << breakpoint << "\n";
             
-            int breakposition = i;
-            while (paragraph[breakposition] != space[0] or breakposition > 0) {
-                breakposition--;
+            bool foundspace = false;
+            for (int x = i; x <= 0; x++) {
+                if (paragraph[x] == space[0]) {
+                    paragraph.insert(x, breaksyntax);
+                    foundspace = true;
+                }
             }
-            
-            if(breakposition > 0){
+            if (!foundspace and !skipnospaces) {
                 paragraph.insert(i, breaksyntax);
-            }
-            else if (paragraph[breakposition == space[0]]) {
-                paragraph.insert(breakposition, breaksyntax);
             }
             iterator = 0;
         }
