@@ -27,10 +27,12 @@ int main()
             std::cout << "iterator is greater than breakpoint. Iterator: " << iterator << "Breakpoint: " << breakpoint << "\n";
             
             bool foundspace = false;
-            for (int x = i; x <= 0; x++) {
+            for (int x = i; x > 0; x--) {
+                std::cout << "Char searching: " << paragraph[x] << " at position: " << x << "\n";
                 if (paragraph[x] == space[0]) {
                     paragraph.insert(x, breaksyntax);
                     foundspace = true;
+                    break;
                 }
             }
             if (!foundspace and !skipnospaces) {
