@@ -33,7 +33,7 @@ int main()
         }
         if (spaces > allowedspaces) {
             for (int x = i; x >= firstspace; x--) {
-                paragraph[x] = NULL;
+                paragraph[x] =0;
             }
         }
     }

@@ -48,17 +48,21 @@
         <table class="DropdownTable">
                 <tr><td><button onclick="ClickDropdown()" class="DropdownTitle">Design patterns</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
-                        A big focus within this project was to keep everything event based, and to avoid any usage of casts. I wanted to avoid casts as these<br>
-                        can be very expensive when it comes to memory usage, with it loading the actor it is connecting to into memory when it may not be<br>
-                        necessary.<br>
-                        <small>Memory usage difference between casting and interfaces<br></small>
+                        A big focus within this project was to avoid any usage of casts. I wanted to avoid casts as these can be very expensive when it comes<br>
+                        to memory usage, with it loading the actor it is connecting to into memory when it may not be necessary.
+                        <small>Memory usage difference between casting and interfaces:<br></small>
                         <image src="/Resources/Images/Casting and interfaceMemory.png" width="750" height="250"></image><br>
-                        his can be seen best within my BP_Button actor, which holds an array of actor references. This reference is as high level as possible,<br>
+                        This can be best seen within my BP_Button actor, which holds an array of actor references. This reference is as high level as possible,<br>
                         meaning that it can be expanded to work with any object that inherits from the actor class. Since these references are higher<br>
                         level, they do not load in the object stored directly, resulting in an decrease in memory usage. These references, when the button is<br>
                         activated, are then used as the actor reference for an interface, which will run a function inside of said actor's code without<br>
                         loading it into memory if it does not exist. An example of where I used this is within the door actor, which changes its opened state<br>
                         when the 'Enabled' interface function is called.<br>
+
+                        Another focus within this project was to use the event-based programming pattern. This means that certain functions where only called<br>
+                        when necessary in code, instead of using tick to check for a condition every frame. This leads to a boost in performance, with less<br>
+                        redundant operations being completed.<br>
+                        
                 </td></tr>
         </table>
     </div>
