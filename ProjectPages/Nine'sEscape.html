@@ -57,12 +57,17 @@
                         level, they do not load in the object stored directly, resulting in an decrease in memory usage. These references, when the button is<br>
                         activated, are then used as the actor reference for an interface, which will run a function inside of said actor's code without<br>
                         loading it into memory if it does not exist. An example of where I used this is within the door actor, which changes its opened state<br>
-                        when the 'Enabled' interface function is called.<br>
+                        when the 'Enabled' interface function is called.<br><br>
 
                         Another focus within this project was to use the event-based programming pattern. This means that certain functions where only called<br>
                         when necessary in code, instead of using tick to check for a condition every frame. This leads to a boost in performance, with less<br>
                         redundant operations being completed.<br>
-                        
+                        To keep to this pattern, I mainly used collisions, with either line traces or actual colliders triggering overlap events in actors.<br>
+                        This can be seen in the push and pull mechanics, where capsule traces where used to apply a force onto game objects in front of the player.
+                </td></tr>
+                <tr><td><button onclick="ClickDropdown()" class="DropdownTitle">Components</button></td></tr>
+                <tr><td id = "DropdownElement" class = "content">
+                    Components
                 </td></tr>
         </table>
     </div>
