@@ -173,14 +173,34 @@ a.ClearWhiteAnchor:hover{
 }
 
 .DropdownTitle{
+    Color:white;
     background:#045a8b;
     width:35em;
+    border-style:solid;
     border:2px;
     border-radius:5px;
     border-color:lightgray;
+    cursor:pointer;
+    font-weight: bolder;
+    font-size:large;
 }
 
+.DropdownTitle:hover{
+    animation:LargeHover;
+    animation-duration:0.25s;
+    animation-fill-mode:forwards;
+}
+
+.DropdownTtitle:not(:hover){
+    animation:LargeHover;
+    animation-duration:0,25s;
+    animation-fill-mode:backwards;
+    animation-direction:reverse;
+}
+
+
 .DropdownTable{
+    border-style:solid;
     border:2px;
     border-radius:5px;
     border-color:lightgrey;
