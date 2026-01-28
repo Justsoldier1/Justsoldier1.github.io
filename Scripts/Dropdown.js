@@ -10,12 +10,8 @@ window.addEventListener('load',function(){
 var clicked = false;
 
 function ClickDropdown(){
-    var childobject = this.nextSibling;
-
-    var style = window.getComputedStyle(childobject);
-    style = style.getPropertyValue('display');
-    console.log(style);
-    if(style == 'none'){
+    console.log(childobject.style.display);
+    if(childobject.style.display == 'none'){
         childobject.style.display = "display";
     }else{
         childobject.style.display = "none";
