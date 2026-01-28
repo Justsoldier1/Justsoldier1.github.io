@@ -1,12 +1,12 @@
 
-function DropdownListeners(){
-    var elements = document.getElementsByClassName("DropdownTitle");
+var elements = document.getElementsByClassName("DropdownTitle");
 
-    for(var i = 0; i < elements.length;i++){
-        elements[i].addEventListener("click",ClickDropdown);
+window.addEventListener('load',function(){
+    for(i = 0; i < elements.length;i++){
+        elements[i].addEventListener('click',ClickDropdown);
         console.log(elements[i].innerHTML);
     }
-}
+});
 
 function ClickDropdown(){
     if(clicked){
