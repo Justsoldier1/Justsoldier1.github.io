@@ -10,15 +10,15 @@ window.addEventListener('load',function(){
 var clicked = false;
 
 function ClickDropdown(){
-    var child = this.child;
+    var childobject = this.nextSibling;
 
-    var style = window.getComputedStyle(child);
+    var style = window.getComputedStyle(childobject);
     style = style.getPropertyValue('display');
     console.log(style);
     if(style == 'none'){
-        child.style.display = "display";
+        childobject.style.display = "display";
     }else{
-        child.style.display = "none";
+        childobject.style.display = "none";
     }
 }
 
