@@ -8,6 +8,8 @@ window.addEventListener('load',function(){
     }
 });
 
+var clicked = false;
+
 function ClickDropdown(){
     if(clicked){
         this.style.display = "block";
