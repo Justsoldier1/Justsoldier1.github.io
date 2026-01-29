@@ -9,7 +9,6 @@ for(i = 0; i < elements.length;i++){
         if(i <= childelements.length){
             console.log("ammount of titles matches ammount of elements");
             var sibling = childelements[i];
-            console.log(sibling.innerHTML);
             console.log(sibling.style.display);
             if(sibling.style.display == 'none'){
                 siblig.style.display = "display";
@@ -23,15 +22,4 @@ for(i = 0; i < elements.length;i++){
 }
 
 var clicked = false;
-
-function ClickDropdown(){
-    
-    console.log(childobject.innerHTML);
-    console.log(childobject.style.display);
-    if(childobject.style.display == 'none'){
-        childobject.style.display = "display";
-    }else{
-        childobject.style.display = "none";
-    }
-}
 
