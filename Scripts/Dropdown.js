@@ -7,6 +7,7 @@ for(i = 0; i < elements.length;i++){
         
         //wrapping sibling getting within a valid check to prevent errors
         if(i <= childelements.length){
+            console.log("ammount of titles matches ammount of elements");
             var sibling = childelements[i];
             console.log(sibling.innerHTML);
             console.log(sibling.style.display);
@@ -15,6 +16,8 @@ for(i = 0; i < elements.length;i++){
             }else{
                 sibling.style.display = "none";
             }
+        }else{
+            console.log("ammount of titles does not match ammount of elements");
         }
     });
 }
