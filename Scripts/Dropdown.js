@@ -3,7 +3,7 @@ var elements = document.getElementsByClassName("DropdownTitle");
 
 for(i = 0; i < elements.length;i++){
     elements[i].addEventListener('click',function(e){
-        var childobject = e.target.next();
+        var childobject = e.target.next;
         console.log(childobject.innerHTML);
         console.log(childobject.style.display);
         if(childobject.style.display == 'none'){
