@@ -6,7 +6,7 @@ for(i = 0; i < elements.length;i++){
     elements[i].addEventListener('click',function(e){
         
         //wrapping sibling getting within a valid check to prevent errors
-        if(i < childelements.length){
+        if(i <= childelements.length){
             console.log("ammount of titles matches ammount of elements");
             var sibling = childelements[i];
             console.log(sibling.innerHTML);
