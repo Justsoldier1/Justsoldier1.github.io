@@ -1,7 +1,7 @@
 
 var elements = document.getElementsByClassName("DropdownTitle");
 
-window.addEventListener('load',function(){
+window.addEventListener('load',function(e){
     for(i = 0; i < elements.length;i++){
         elements[i].addEventListener('click',ClickDropdown (e));
     }
