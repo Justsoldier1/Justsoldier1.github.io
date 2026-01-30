@@ -10,7 +10,7 @@ for(i = 0; i < elements.length;i++){
             
             var sibling = childelements[position];
             if(sibling.style.display == 'none'){
-                siblig.style.display = "display";
+                sibling.style.display = "display";
             }else{
                 sibling.style.display = "none";
             }
