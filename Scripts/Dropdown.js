@@ -4,7 +4,7 @@ const childelements = Array.from(document.getElementsByClassName("content"));
 
 for(i = 0; i < elements.length;i++){
     elements[i].addEventListener('click',function(e){
-        var position = elements.findIndex(this);
+        var position = elements.findIndex(e.target);
         //wrapping sibling getting within a valid check to prevent errors
         if(position <= childelements.length){
             
