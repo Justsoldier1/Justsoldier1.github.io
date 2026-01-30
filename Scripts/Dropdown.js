@@ -1,6 +1,6 @@
 
-const elements = document.getElementsByClassName("DropdownTitle");
-const childelements = document.getElementsByClassName("content");
+const elements = Array.from(document.getElementsByClassName("DropdownTitle"));
+const childelements = Array.from(document.getElementsByClassName("content"));
 
 for(i = 0; i < elements.length;i++){
     elements[i].addEventListener('click',function(e){
