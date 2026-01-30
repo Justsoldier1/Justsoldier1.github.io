@@ -9,13 +9,13 @@ for(i = 0; i < elements.length;i++){
         if(position <= childelements.length){
             
             var sibling = childelements[position];
-            if(sibling.style.display == 'none'){
-                sibling.style.display = "display";
+            if(sibling.style.display == "none"){
+                sibling.style.display = "block";
             }else{
                 sibling.style.display = "none";
             }
         }else{
-            console.log("ammount of titles does not match ammount of elements. i is: " + i + "while childelements is: " + childelements.length);
+            console.log("ammount of titles does not match ammount of elements. Elements is " + elements.length + "while childelements is: " + childelements.length);
         }
     });
 }
