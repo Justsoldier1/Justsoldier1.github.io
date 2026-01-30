@@ -57,7 +57,9 @@
                         when necessary in code, instead of using tick to check for a condition every frame. This leads to a boost in performance, with less<br>
                         redundant operations being completed.<br>
                         To keep to this pattern, I mainly used collisions, with either line traces or actual colliders triggering overlap events in actors.<br>
-                        This can be seen in the push and pull mechanics, where capsule traces where used to apply a force onto game objects in front of the player.
+                        This can be seen in the push and pull mechanics, where capsule traces where used to apply a force onto game objects in front of the player.<br>
+                        <small>Line trace used for pushing and pulling:</small><br>
+                        <image src="" width="750" height="250"></image><br>
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Components</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
