@@ -9,7 +9,7 @@ for(i = 0; i < elements.length;i++){
         if(position <= childelements.length){
             
             var sibling = childelements[position];
-            if(sibling.style.display == "none"){
+            if(sibling.style.display != "block"){
                 sibling.style.display = "block";
             }else{
                 sibling.style.display = "none";
