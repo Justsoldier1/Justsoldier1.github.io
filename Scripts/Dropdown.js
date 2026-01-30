@@ -8,8 +8,8 @@ for(i = 0; i < elements.length;i++){
         //wrapping sibling getting within a valid check to prevent errors
         if(i <= childelements.length){
             console.log("ammount of titles matches ammount of elements");
+            console.log(i);
             var sibling = childelements[i];
-            console.log(sibling.style.display);
             if(sibling.style.display == 'none'){
                 siblig.style.display = "display";
             }else{
