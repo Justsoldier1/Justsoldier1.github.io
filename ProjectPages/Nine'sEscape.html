@@ -43,9 +43,9 @@
                 <tr><td><button class="DropdownTitle">Design patterns</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
                         A big focus within this project was to avoid any usage of casts. I wanted to avoid casts as these can be very expensive when it comes<br>
-                        to memory usage, with it loading the actor it is connecting to into memory when it may not be necessary.
+                        to memory usage, with it loading the actor it is connecting to into memory when it may not be necessary.<br>
                         <small>Memory usage difference between casting and interfaces:<br></small>
-                        <image src="/Resources/Images/Casting and interfaceMemory.png" width="750" height="250" Title="Image showing memory usage differences with casting, with casting using 0.6 more KiB per usage"></image><br>
+                        <image src="/Resources/Images/Casting and interfaceMemory.png" class="DropdownImage" Title="Image showing memory usage differences with casting, with casting using 0.6 more KiB per usage"></image><br>
                         This can be best seen within my BP_Button actor, which holds an array of actor references. This reference is as high level as possible,<br>
                         meaning that it can be expanded to work with any object that inherits from the actor class. Since these references are higher<br>
                         level, they do not load in the object stored directly, resulting in an decrease in memory usage. These references, when the button is<br>
@@ -59,14 +59,14 @@
                         To keep to this pattern, I mainly used collisions, with either line traces or actual colliders triggering overlap events in actors.<br>
                         This can be seen in the push and pull mechanics, where capsule traces where used to apply a force onto game objects in front of the player.<br>
                         <small>Line trace used for pushing and pulling:</small><br>
-                        <image src="" width="750" height="250" title="Image showing a capsule trace in Unreal engine"></image><br>
+                        <image src="" class="DropdownImage" title="Image showing a capsule trace in Unreal engine"></image><br>
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Components</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
                     Within this project, components were used to make reusable code. Components are classes that can be added to any GameObject to add<br>
                     functionality. The component that was used the most was the ammo component. This was similar to a health component, with an integer<br>
                     that had a maximum and a minimum amount, that would be clamped to stop the integer exceeding these limits.<br>
-                    
+                    <image src="" class="DropdownImage" title="Image showing a simple widget implementation of the ammo component"></image>
                 </td></tr>
         </table>
     </div>

@@ -205,3 +205,8 @@ a.ClearWhiteAnchor:hover{
     border-radius:5px;
     border-color:lightgrey;
 }
+
+.DropdownImage{
+    width:750px;
+    height:250px;
+}
