@@ -83,7 +83,14 @@
                     GameplayStatics built in function: "GetGameMode". I then made an interface that allowed for me to set / get each SaveGame variable,<br>
                     and save / delete the data in the current save slot.<br>
                     <small>Game mode interface functions:</small><br>
-                    <image src="" class="DropdownImage" title="Image showing all functions within the GameMode interface"></image>
+                    <image src="" class="DropdownImage" title="Image showing all functions within the GameMode interface"></image><br>
+                    This was not only used to lock players from entering levels that marked as unbeat, but also for saving the players best time to beat<br>
+                    the level. This was mainly inspired by a similar system in Ultrakill, as this system gave the game a lot more replayability, as the<br>
+                    player can try to beat the time, rather than just beating the level and never having a reason to revisit it. The system just looks<br> 
+                    at the saved time, and the time of the level timer, and overwrites the saved time if the level timer has been running for less time.<br>
+                    <small>Saved time being overwritten:</small><br>
+                    <i-- Will contain a video showing the saved time being overwritten--></i-->
+                    <iframe src="" width ="1000"height="500" allowfullscreen></iframe><br>
                 </td></tr>
         </table>
     </div>
