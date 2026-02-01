@@ -77,7 +77,13 @@
                     attempted in a previous project using game instances, which saves data between levels, but this had some problems with not saving data<br>
                     when closing and reopening the game.<br>
                     <small>Data is reset when the game is closed:</small><br>
-                    <image src="" class="DropdownImage" Title="The IsBeat variable is reset to false after restarting the game"></image>
+                    <image src="" class="DropdownImage" Title="The IsBeat variable is reset to false after restarting the game"></image><br>
+                    To fix this, I used a save game actor, which is a built in class within Unreal Engine that saves It's data to a file. To ensure I could<br>
+                    access this anywhere in the code, I saved a reference to it within the project's Game Mode actor, which can be accessed using the<br> 
+                    GameplayStatics built in function: "GetGameMode". I then made an interface that allowed for me to set / get each SaveGame variable,<br>
+                    and save / delete the data in the current save slot.<br>
+                    <small>Game mode interface functions:</small><br>
+                    <image src="" class="DropdownImage" title="Image showing all functions within the GameMode interface"></image>
                 </td></tr>
         </table>
     </div>
