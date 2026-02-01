@@ -164,12 +164,13 @@ a.ClearWhiteAnchor:hover{
 }
 
 .content{
-    background:#045a8b;
+    background:rgba(4,90,139,1);
     border-style:solid;
     border:2px;
     border-radius:5px;
     border-color:lightgray;
     display:none;
+    opacity:1;
 }
 
 .DropdownTitle{
@@ -183,6 +184,7 @@ a.ClearWhiteAnchor:hover{
     cursor:pointer;
     font-weight: bolder;
     font-size:large;
+    opacity:1;
 }
 
 .DropdownTitle:hover{
@@ -200,13 +202,17 @@ a.ClearWhiteAnchor:hover{
 
 
 .DropdownTable{
+    margin-top:1em;
+    padding:5px;
     border-style:solid;
     border:2px;
     border-radius:5px;
     border-color:lightgrey;
+    background-color:rgba(152, 163, 173,0.5)
 }
 
 .DropdownImage{
     width:750px;
     height:250px;
+    opacity:1;
 }
