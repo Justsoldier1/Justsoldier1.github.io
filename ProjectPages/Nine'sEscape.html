@@ -84,7 +84,7 @@
                     GameplayStatics built in function: "GetGameMode". I then made an interface that allowed for me to set / get each SaveGame variable,<br>
                     and save / delete the data in the current save slot.<br>
                     <small>Game mode interface functions:</small><br>
-                    <image src="/Resources/Images/SaveInterface.png" width="340px" height="460px" title="Image showing all functions within the GameMode interface"></image><br>
+                    <image src="/Resources/Images/SaveInterface.png" width="340px" height="460px" class="DropdownMargin" title="Image showing all functions within the GameMode interface"></image><br>
                     This was not only used to lock players from entering levels that marked as unbeat, but also for saving the players best time to beat<br>
                     the level. This was mainly inspired by a similar system in Ultrakill, as this system gave the game a lot more replayability, as the<br>
                     player can try to beat the time, rather than just beating the level and never having a reason to revisit it. The system just looks<br> 
@@ -104,7 +104,12 @@
                     At the start of the project, gravity fields where defined using collision box actors, but these were difficult to work with, and did<br>
                     not allow for complex gravity changing collisions. The mesh shown below would be incredibly difficult to create gravity collisions<br>
                     for, without them either being Janky, or providing the player with unexpected results.<br>
-                    <image src="/Resources/Images/TrickyLevelGeometry.png" class="DropdownImage" title="Rounded level geometry that cannot easily be covered by box collisions"></image><br>
+                    <image src="/Resources/Images/TrickyLevelGeometry_ReducedResolution.png" width="750px" height="500px" class="DropdownMargin" title="Rounded level geometry that cannot easily be covered by box collisions"></image><br>
+                    I fixed this by creating a gravity field component that had a function that mimics the overlap event of the gravity field box<br>
+                    colliders. This means that it can be applied to any collider, such as a static mesh for more complex collisions. However, I used this as<br>
+                    little as possible, to avoid calculating complex collisions without needing to.<br>
+                    <small>Gravity field component implementation:</small><br>
+                    <image src="/Resources/Images/GravityFieldComponent.png" width="750px" height="400px" class="DropdownMargin" title="Blueprint implementation of the gravity field component"></image><br>
                 </td></tr>
         </table>
     </div>
