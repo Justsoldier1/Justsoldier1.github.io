@@ -216,3 +216,8 @@ a.ClearWhiteAnchor:hover{
     height:250px;
     opacity:1;
 }
+
+.DropdownVideo{
+    width:1000px;
+    height:500px;
+}

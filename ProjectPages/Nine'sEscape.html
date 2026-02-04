@@ -52,7 +52,7 @@
                         activated, are then used as the actor reference for an interface, which will run a function inside of said actor's code without<br>
                         loading it into memory if it does not exist. An example of where I used this is within the door actor, which changes its opened state<br>
                         when the 'Enabled' interface function is called.<br><br>
-                        <iframe src="https://www.youtube.com/embed/CVpMu6GlX40" width ="1000"height="500" allowfullscreen></iframe><br>
+                        <iframe src="https://www.youtube.com/embed/CVpMu6GlX40" class="DropdownVideo" allowfullscreen></iframe><br>
                         Another focus within this project was to use the event-based programming pattern. This means that certain functions where only called<br>
                         when necessary in code, instead of using tick to check for a condition every frame. This leads to a boost in performance, with less<br>
                         redundant operations being completed.<br>
@@ -67,7 +67,7 @@
                     functionality. The component that was used the most was the ammo component. This was similar to a health component, with an integer<br>
                     that had a maximum and a minimum amount, that would be clamped to stop the integer exceeding these limits.<br>
                     <small>Ammo component and its uses in the project:</small><br>
-                    <iframe src="https://www.youtube.com/embed/lDBeggN0LLI" width = "1000" height= "500" allowfullscreen></iframe><br>
+                    <iframe src="https://www.youtube.com/embed/lDBeggN0LLI" class="DropdownVideo" allowfullscreen></iframe><br>
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Save system</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
@@ -76,13 +76,13 @@
                     attempted in a previous project using game instances, which saves data between levels, but this had some problems with not saving data<br>
                     when closing and reopening the game.<br>
                     <small>Data is reset when the game is closed:</small><br>
-                    <image src="" class="DropdownImage" Title="The IsBeat variable is reset to false after restarting the game"></image><br>
+                    <iframe src="https://www.youtube.com/embed/kzuWOsKuzq0" class="DropdownVideo" allowfullscreen></iframe><br>
                     To fix this, I used a save game actor, which is a built in class within Unreal Engine that saves It's data to a file. To ensure I could<br>
                     access this anywhere in the code, I saved a reference to it within the project's Game Mode actor, which can be accessed using the<br> 
                     GameplayStatics built in function: "GetGameMode". I then made an interface that allowed for me to set / get each SaveGame variable,<br>
                     and save / delete the data in the current save slot.<br>
                     <small>Game mode interface functions:</small><br>
-                    <image src="" class="DropdownImage" title="Image showing all functions within the GameMode interface"></image><br>
+                    <image src="/Resources/Images/SaveInterface.png" width="340px" height="460px" title="Image showing all functions within the GameMode interface"></image><br>
                     This was not only used to lock players from entering levels that marked as unbeat, but also for saving the players best time to beat<br>
                     the level. This was mainly inspired by a similar system in Ultrakill, as this system gave the game a lot more replayability, as the<br>
                     player can try to beat the time, rather than just beating the level and never having a reason to revisit it. The system just looks<br> 
