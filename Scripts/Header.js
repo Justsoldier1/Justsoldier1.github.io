@@ -1,6 +1,6 @@
 //creates a variable that targets items with the header id
 const header = document.querySelector('#header')
-
+//creates an event listener that runs this function on load
 window.addEventListener('load', function(){
     //sets the HTML code within this element
     header.innerHTML = `

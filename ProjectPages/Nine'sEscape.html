@@ -110,6 +110,14 @@
                     little as possible, to avoid calculating complex collisions without needing to.<br>
                     <small>Gravity field component implementation:</small><br>
                     <image src="/Resources/Images/GravityFieldComponent.png" width="750px" height="400px" class="DropdownMargin" title="Blueprint implementation of the gravity field component"></image><br>
+                    <big><b>The code</b></big><br>
+                    The gravity fields use a parent for functionality, with each child selecting a different variable within the E_SelectedGravity enum.<br>
+                    This makes selecting gravity easier, as I can just select the gravity direction in blueprint, without needing to memorise gravity<br>
+                    direction and rotation vectors. For the gravity field component, the gravity direction enum is instance editable so that it can be<br>
+                    selected in world / per class for ease of use.<br>
+                    <small>E_SelectedGravity enum:</small><br>
+                    <image src="" class="DropdownImage" title="Enum allowing for selection of different gravity directions"></image>
+
                 </td></tr>
         </table>
     </div>
