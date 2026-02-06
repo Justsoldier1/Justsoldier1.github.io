@@ -22,7 +22,7 @@
     <i-- logo--></i-->
     <div>
         <h1 Class="AboutLink">Nine's escape</h1>
-        <img src="/Resources/Images/Nines escape logo.png" width="640" class ="Border">
+        <img src="/Resources/Images/GameLogos/Nines escape logo.png" width="640" class ="Border">
     </div>
 
     <i-- basic info--></i-->
@@ -45,7 +45,7 @@
                         A big focus within this project was to avoid any usage of casts. I wanted to avoid casts as these can be very expensive when it comes<br>
                         to memory usage, with it loading the actor it is connecting to into memory when it may not be necessary.<br>
                         <small>Memory usage difference between casting and interfaces:<br></small>
-                        <image src="/Resources/Images/Casting and interfaceMemory.png" class="DropdownImage" Title="Image showing memory usage differences with casting, with casting using 0.6 more KiB per usage"></image><br>
+                        <image src="/Resources/Images/Nines escape/Casting and interfaceMemory.png" class="DropdownImage" Title="Image showing memory usage differences with casting, with casting using 0.6 more KiB per usage"></image><br>
                         This can be best seen within my BP_Button actor, which holds an array of actor references. This reference is as high level as possible,<br>
                         meaning that it can be expanded to work with any object that inherits from the actor class. Since these references are higher<br>
                         level, they do not load in the object stored directly, resulting in an decrease in memory usage. These references, when the button is<br>
@@ -84,7 +84,7 @@
                     GameplayStatics built in function: "GetGameMode". I then made an interface that allowed for me to set / get each SaveGame variable,<br>
                     and save / delete the data in the current save slot.<br>
                     <small>Game mode interface functions:</small><br>
-                    <image src="/Resources/Images/SaveInterface.png" width="340px" height="460px" class="DropdownMargin" title="Image showing all functions within the GameMode interface"></image><br>
+                    <image src="/Resources/Images/Nines escape/SaveInterface.png" width="340px" height="460px" class="DropdownMargin" title="Image showing all functions within the GameMode interface"></image><br>
                     This was not only used to lock players from entering levels that marked as unbeat, but also for saving the players best time to beat<br>
                     the level. This was mainly inspired by a similar system in Ultrakill, as this system gave the game a lot more replayability, as the<br>
                     player can try to beat the time, rather than just beating the level and never having a reason to revisit it. The system just looks<br> 
@@ -104,19 +104,19 @@
                     At the start of the project, gravity fields where defined using collision box actors, but these were difficult to work with, and did<br>
                     not allow for complex gravity changing collisions. The mesh shown below would be incredibly difficult to create gravity collisions<br>
                     for, without them either being Janky, or providing the player with unexpected results.<br>
-                    <image src="/Resources/Images/TrickyLevelGeometry_ReducedResolution.png" width="750px" height="500px" class="DropdownMargin" title="Rounded level geometry that cannot easily be covered by box collisions"></image><br>
+                    <image src="/Resources/Images/Nines escape/TrickyLevelGeometry_ReducedResolution.png" width="750px" height="500px" class="DropdownMargin" title="Rounded level geometry that cannot easily be covered by box collisions"></image><br>
                     I fixed this by creating a gravity field component that had a function that mimics the overlap event of the gravity field box<br>
                     colliders. This means that it can be applied to any collider, such as a static mesh for more complex collisions. However, I used this as<br>
                     little as possible, to avoid calculating complex collisions without needing to.<br>
                     <small>Gravity field component implementation:</small><br>
-                    <image src="/Resources/Images/GravityFieldComponent.png" width="750px" height="400px" class="DropdownMargin" title="Blueprint implementation of the gravity field component"></image><br>
+                    <image src="/Resources/Images/Nines escape/GravityFieldComponent.png" width="750px" height="400px" class="DropdownMargin" title="Blueprint implementation of the gravity field component"></image><br>
                     <big><b>The code</b></big><br>
                     The gravity fields use a parent for functionality, with each child selecting a different variable within the E_SelectedGravity enum.<br>
                     This makes selecting gravity easier, as I can just select the gravity direction in blueprint, without needing to memorise gravity<br>
                     direction and rotation vectors. For the gravity field component, the gravity direction enum is instance editable so that it can be<br>
                     selected in world / per class for ease of use.<br>
                     <small>E_SelectedGravity enum:</small><br>
-                    <image src="/Resources/Images/SelectedgravityEnum_Cropped.png" width="500px" height="200px" class="DrodpownMargin" title="Enum allowing for selection of different gravity directions"></image><br>
+                    <image src="/Resources/Images/Nines escape/SelectedgravityEnum_Cropped.png" width="500px" height="200px" class="DrodpownMargin" title="Enum allowing for selection of different gravity directions"></image><br>
                     This enum also meant that I could easily get the rotation of a gravity field in basic readable terms, so I used this to build a simple<br>
                     UI element that tells the user what rotation a wall has.<br>
                     <small>Gravity direction UI element:</small><br>
@@ -129,7 +129,11 @@
                     movement methods. For the camera, I had to manually rotate it instead of using Unreal's built In functions. This also meant that for the<br>
                     movement script I had to use the cameras forward and right vectors, instead of the actors, as the camera would be offset by the<br>
                     move code.<br>
-                    
+                </td></tr>
+                <tr><td><button class="DropdownTitle">AI Behaviour tree</button></td></tr>
+                <tr><td id = "DropdownElement" class = "content">
+                    <small>Behaviour tree overview:</small><br>
+                    <image src="/Resources/Images/Nines escape/Nine's escape behaviour tree_HigherQuality_Cropped.png" width="1750px" height="440px" class="DropdownMargin" title="A large scale overview of the behaviour tree for my project"></image><br></br>
                 </td></tr>
         </table>
     </div>

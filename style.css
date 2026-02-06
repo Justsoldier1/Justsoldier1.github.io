@@ -216,7 +216,7 @@ a.ClearWhiteAnchor:hover{
     height:250px;
     margin-top:0.5em;
     margin-bottom:0.5em;
-    opacity:1;
+    border-radius:5px;
 }
 
 .DropdownVideo{
@@ -224,9 +224,11 @@ a.ClearWhiteAnchor:hover{
     height:500px;
     margin-top:0.5em;
     margin-bottom:0.5em;
+    border-radius:5px;
 }
 
 .DropdownMargin{
     margin-top:0.5em;
     margin-bottom:0.5em;
+    border-radius:5px;
 }
