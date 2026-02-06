@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\",
+  "WorkspaceRootPath": "C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74881BC2-C404-4437-9BF1-3D0E7B368EA5}|Breakline\\Breakline.vcxproj|C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\Breakline\\Breakline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{74881BC2-C404-4437-9BF1-3D0E7B368EA5}|Breakline\\Breakline.vcxproj|C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\Breakline\\Breakline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{74881BC2-C404-4437-9BF1-3D0E7B368EA5}|Breakline\\Breakline.vcxproj|solutionrelative:Breakline\\Breakline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58FD04E1-A263-47B0-892A-2D312FE20AF8}|SpaceRemover\\SpaceRemover.vcxproj|C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\SpaceRemover\\SpaceRemover.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{58FD04E1-A263-47B0-892A-2D312FE20AF8}|SpaceRemover\\SpaceRemover.vcxproj|C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\SpaceRemover\\SpaceRemover.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58FD04E1-A263-47B0-892A-2D312FE20AF8}|SpaceRemover\\SpaceRemover.vcxproj|solutionrelative:SpaceRemover\\SpaceRemover.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "SpaceRemover.cpp",
-              "DocumentMoniker": "C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\SpaceRemover\\SpaceRemover.cpp",
+              "DocumentMoniker": "C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\SpaceRemover\\SpaceRemover.cpp",
               "RelativeDocumentMoniker": "SpaceRemover\\SpaceRemover.cpp",
-              "ToolTip": "C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\SpaceRemover\\SpaceRemover.cpp",
+              "ToolTip": "C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\SpaceRemover\\SpaceRemover.cpp",
               "RelativeToolTip": "SpaceRemover\\SpaceRemover.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -36,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Breakline.cpp",
-              "DocumentMoniker": "C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\Breakline\\Breakline.cpp",
+              "DocumentMoniker": "C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\Breakline\\Breakline.cpp",
               "RelativeDocumentMoniker": "Breakline\\Breakline.cpp",
-              "ToolTip": "C:\\Users\\whatt.JUSTSOLDIERS_PC\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\Breakline\\Breakline.cpp",
+              "ToolTip": "C:\\Users\\g014475o\\Documents\\GitHub\\Justsoldier1.github.io\\Breakline\\Breakline\\Breakline.cpp",
               "RelativeToolTip": "Breakline\\Breakline.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-25T23:33:02.57Z",
               "EditorCaption": ""

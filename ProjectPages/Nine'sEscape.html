@@ -116,8 +116,20 @@
                     direction and rotation vectors. For the gravity field component, the gravity direction enum is instance editable so that it can be<br>
                     selected in world / per class for ease of use.<br>
                     <small>E_SelectedGravity enum:</small><br>
-                    <image src="" class="DropdownImage" title="Enum allowing for selection of different gravity directions"></image>
+                    <image src="/Resources/Images/SelectedgravityEnum_Cropped.png" width="500px" height="200px" class="DrodpownMargin" title="Enum allowing for selection of different gravity directions"></image><br>
+                    This enum also meant that I could easily get the rotation of a gravity field in basic readable terms, so I used this to build a simple<br>
+                    UI element that tells the user what rotation a wall has.<br>
+                    <small>Gravity direction UI element:</small><br>
+                    <iframe src="https://www.youtube.com/embed/NANsyU5TrhU" class="DropdownVideo" allowfullscreen></iframe><br>
+                    I can then use a switch statement to select different values needed for flipping gravity, such as the amount the camera needs to rotate<br>
+                    and the gravity direction, which is a vector that is built in to Unreal for flipping gravity. The camera rotation is needed as<br>
+                    gravity direction does not intrinsically change the camera view, just the direction the player falls.<br><br>
 
+                    This system also caused some issues with camera look and character movement code, so I had to move away from the standard unreal<br>
+                    movement methods. For the camera, I had to manually rotate it instead of using Unreal's built In functions. This also meant that for the<br>
+                    movement script I had to use the cameras forward and right vectors, instead of the actors, as the camera would be offset by the<br>
+                    move code.<br>
+                    
                 </td></tr>
         </table>
     </div>
