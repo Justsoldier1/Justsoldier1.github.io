@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyler Gledhill | Nine's escape</title>
+    <title>Tyler Gledhill | Portalis gateways</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <script type = "module">
-            //import {ClickDropdown} from '/Resources/Scripts/Dropdown.js';
-    </script>
 
 </head>
 <body>
@@ -22,15 +19,15 @@
     <i-- logo--></i-->
     <div>
         <h1 Class="AboutLink">Nine's escape</h1>
-        <img src="/Resources/Images/GameLogos/Nines escape logo.png" width="640" class ="Border">
+        <img src="/Resources/Images/GameLogos/Portalis gateways logo.png" width="640" class ="Border">
     </div>
 
     <i-- basic info--></i-->
     <div>
         <table class="Border" class = "CyanTable">
-            <tr class ="CyanTable"><td>Engine: Unreal Engine 5</td></tr>
-            <tr class ="CyanTable"><td>Language: Blueprint</td></tr>
-            <tr class ="CyanTable"><td>Genre:First person Puzzle</td></tr>
+            <tr class ="CyanTable"><td>Engine: Unity</td></tr>
+            <tr class ="CyanTable"><td>Language: C#</td></tr>
+            <tr class ="CyanTable"><td>Genre:Top down wave shooter</td></tr>
             <tr class ="CyanTable"><td>Contributors: Tyler Gledhill</td></tr>
             <tr class ="CyanTable"><td>Project origin: University Project</td></tr>
             <tr class ="CyanTable"><td>Project duration: 9 weeks</td></tr>
@@ -40,116 +37,9 @@
     <i-- info dropdowns--></i-->
     <div>
         <table class="DropdownTable">
-                <tr><td><button class="DropdownTitle">Design patterns</button></td></tr>
+                <tr><td><button class="DropdownTitle">Weapon save system</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
-                        A big focus within this project was to avoid any usage of casts. I wanted to avoid casts as these can be very expensive when it comes<br>
-                        to memory usage, with it loading the actor it is connecting to into memory when it may not be necessary.<br>
-                        <small>Memory usage difference between casting and interfaces:<br></small>
-                        <image src="/Resources/Images/Nines escape/Casting and interfaceMemory.png" class="DropdownImage" Title="Image showing memory usage differences with casting, with casting using 0.6 more KiB per usage"></image><br>
-                        This can be best seen within my BP_Button actor, which holds an array of actor references. This reference is as high level as possible,<br>
-                        meaning that it can be expanded to work with any object that inherits from the actor class. Since these references are higher<br>
-                        level, they do not load in the object stored directly, resulting in an decrease in memory usage. These references, when the button is<br>
-                        activated, are then used as the actor reference for an interface, which will run a function inside of said actor's code without<br>
-                        loading it into memory if it does not exist. An example of where I used this is within the door actor, which changes its opened state<br>
-                        when the 'Enabled' interface function is called.<br><br>
-                        <iframe src="https://www.youtube.com/embed/CVpMu6GlX40" class="DropdownVideo" allowfullscreen></iframe><br>
-                        Another focus within this project was to use the event-based programming pattern. This means that certain functions where only called<br>
-                        when necessary in code, instead of using tick to check for a condition every frame. This leads to a boost in performance, with less<br>
-                        redundant operations being completed.<br>
-                        To keep to this pattern, I mainly used collisions, with either line traces or actual colliders triggering overlap events in actors.<br>
-                        This can be seen in the push and pull mechanics, where capsule traces where used to apply a force onto game objects in front of the player.<br>
-                        <small>Line trace used for pushing and pulling:</small><br>
-                        <image src="" class="DropdownImage" title="Image showing a capsule trace in Unreal engine"></image><br>
-                </td></tr>
-
-                <tr><td><button class="DropdownTitle">Components</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
-                    Within this project, components were used to make reusable code. Components are classes that can be added to any GameObject to add<br>
-                    functionality. The component that was used the most was the ammo component. This was similar to a health component, with an integer<br>
-                    that had a maximum and a minimum amount, that would be clamped to stop the integer exceeding these limits.<br>
-                    <small>Ammo component and its uses in the project:</small><br>
-                    <iframe src="https://www.youtube.com/embed/lDBeggN0LLI" class="DropdownVideo" allowfullscreen></iframe><br>
-                </td></tr>
-
-                <tr><td><button class="DropdownTitle">Save system</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
-                    Since this game was based around puzzle solving, and was inspired a lot by portal, I decided that it would be important to add a save<br>
-                    system, where levels can be saved as beat so that the player can progress within multiple sittings. This was something I had<br>
-                    attempted in a previous project using game instances, which saves data between levels, but this had some problems with not saving data<br>
-                    when closing and reopening the game.<br>
-                    <small>Data is reset when the game is closed:</small><br>
-                    <iframe src="https://www.youtube.com/embed/kzuWOsKuzq0" class="DropdownVideo" allowfullscreen></iframe><br>
-                    To fix this, I used a save game actor, which is a built in class within Unreal Engine that saves It's data to a file. To ensure I could<br>
-                    access this anywhere in the code, I saved a reference to it within the project's Game Mode actor, which can be accessed using the<br> 
-                    GameplayStatics built in function: "GetGameMode". I then made an interface that allowed for me to set / get each SaveGame variable,<br>
-                    and save / delete the data in the current save slot.<br>
-                    <small>Game mode interface functions:</small><br>
-                    <image src="/Resources/Images/Nines escape/SaveInterface.png" width="340px" height="460px" class="DropdownMargin" title="Image showing all functions within the GameMode interface"></image><br>
-                    This was not only used to lock players from entering levels that marked as unbeat, but also for saving the players best time to beat<br>
-                    the level. This was mainly inspired by a similar system in Ultrakill, as this system gave the game a lot more replayability, as the<br>
-                    player can try to beat the time, rather than just beating the level and never having a reason to revisit it. The system just looks<br> 
-                    at the saved time, and the time of the level timer, and overwrites the saved time if the level timer has been running for less time.<br>
-                    <small>Saved time being overwritten:</small><br>
-                    <i-- Will contain a video showing the saved time being overwritten--></i-->
-                    <iframe src="https://youtube.com/embed/0Bf-s9cG-cU" class="DropdownVideo" allowfullscreen></iframe><br>
-                </td></tr>
-
-                <tr><td><button class="DropdownTitle">Gravity system</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
-                    The main mechanic of this project was the gravity system. The mechanic idea was inspired by the character Nine from 'I am Number Four'<br>
-                    by Pittacus Lore, while the functionality was inspired by the gravity fields in Super Mario Galaxy. The video below was my main<br>
-                    inspiration for how this mechanic would work.<br>
-                    <small>"How spherical planets bent the rules in super mario galaxy" by Jasper:</small><br>
-                    <iframe src="https://youtube.com/embed/QLH_0T_xv3I?si=-R4lf5sS8yOOMoHN" class="DropdownVideo" allowfullscreen></iframe><br>
-                    At the start of the project, gravity fields where defined using collision box actors, but these were difficult to work with, and did<br>
-                    not allow for complex gravity changing collisions. The mesh shown below would be incredibly difficult to create gravity collisions<br>
-                    for, without them either being Janky, or providing the player with unexpected results.<br>
-                    <image src="/Resources/Images/Nines escape/TrickyLevelGeometry_ReducedResolution.png" width="750px" height="500px" class="DropdownMargin" title="Rounded level geometry that cannot easily be covered by box collisions"></image><br>
-                    I fixed this by creating a gravity field component that had a function that mimics the overlap event of the gravity field box<br>
-                    colliders. This means that it can be applied to any collider, such as a static mesh for more complex collisions. However, I used this as<br>
-                    little as possible, to avoid calculating complex collisions without needing to.<br>
-                    <small>Gravity field component implementation:</small><br>
-                    <image src="/Resources/Images/Nines escape/GravityFieldComponent.png" width="750px" height="400px" class="DropdownMargin" title="Blueprint implementation of the gravity field component"></image><br>
-                    <big><b>The code</b></big><br>
-                    The gravity fields use a parent for functionality, with each child selecting a different variable within the E_SelectedGravity enum.<br>
-                    This makes selecting gravity easier, as I can just select the gravity direction in blueprint, without needing to memorise gravity<br>
-                    direction and rotation vectors. For the gravity field component, the gravity direction enum is instance editable so that it can be<br>
-                    selected in world / per class for ease of use.<br>
-                    <small>E_SelectedGravity enum:</small><br>
-                    <image src="/Resources/Images/Nines escape/SelectedgravityEnum_Cropped.png" width="500px" height="200px" class="DrodpownMargin" title="Enum allowing for selection of different gravity directions"></image><br>
-                    This enum also meant that I could easily get the rotation of a gravity field in basic readable terms, so I used this to build a simple<br>
-                    UI element that tells the user what rotation a wall has.<br>
-                    <small>Gravity direction UI element:</small><br>
-                    <iframe src="https://www.youtube.com/embed/NANsyU5TrhU" class="DropdownVideo" allowfullscreen></iframe><br>
-                    I can then use a switch statement to select different values needed for flipping gravity, such as the amount the camera needs to rotate<br>
-                    and the gravity direction, which is a vector that is built in to Unreal for flipping gravity. The camera rotation is needed as<br>
-                    gravity direction does not intrinsically change the camera view, just the direction the player falls.<br><br>
-
-                    This system also caused some issues with camera look and character movement code, so I had to move away from the standard unreal<br>
-                    movement methods. For the camera, I had to manually rotate it instead of using Unreal's built In functions. This also meant that for the<br>
-                    movement script I had to use the cameras forward and right vectors, instead of the actors, as the camera would be offset by the<br>
-                    move code.<br>
-                </td></tr>
-                <tr><td><button class="DropdownTitle">AI Behaviour tree</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
-                    <small>Behaviour tree overview:</small><br>
-                    <image src="/Resources/Images/Nines escape/Nine's escape behaviour tree_HigherQuality_Cropped.png" width="1750px" height="440px" class="DropdownMargin" title="A large scale overview of the behaviour tree for my project"></image><br></br>
-                </td></tr>
-                <tr><td><button class="DropdownTitle">Basic procedural animations</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
-                    Within this project, I used basic procedural animations throughout every moving asset. I used these for two reasons, for one, to<br>
-                    compensate for my lack of experience within 3D animation. The other reason was to allow for accurate collisions with objects. For<br>
-                    example, the doors move in world when they open, so I did not need to do any other code to let the player move through an open door.<br>
-                    <i-- place a video here showing doors moving and the collisions working appropraitely --></i-->
-                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
-                    To make these animations, I used timelines, which are a blueprint functionality that allow for a variable, such as a position vector or<br>
-                    a multiply float, to be changed over a set period of time.<br>
-                    <i-- place an image here showing the door timeline--></i-->
-                    <image src="" class="DropdownImage" title="Timeline that moves a door mesh through the world, with a bounce-like effect to improve the animation quality"></image>
-                </td></tr>
-                <tr><td><button class="DropdownTitle">Non-Programming content</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
-                    Other elements
+                    Weapons are saved
                 </td></tr>
         </table>
     </div>
