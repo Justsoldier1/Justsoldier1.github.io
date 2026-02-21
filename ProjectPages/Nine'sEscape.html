@@ -134,6 +134,10 @@
                 <tr><td id = "DropdownElement" class = "content">
                     <small>Behaviour tree overview:</small><br>
                     <image src="/Resources/Images/Nines escape/Nine's escape behaviour tree_HigherQuality_Cropped.png" width="1750px" height="440px" class="DropdownMargin" title="A large scale overview of the behaviour tree for my project"></image><br></br>
+                    The AI enemy found in the final level of this project was created using a behaviour tree. This allows for the agent (the character<br>
+                    controlled by the AI) to select which 'branch' of code to run depending on the data held in the agent's blackboard.<br>
+                    <image src="/Resources/Images/Nines escape/Nine's escape blackboard.png" width="750" height="300" class="DropdownMargin" title="The blackboard used for the AI agent from the final level"></image>
+
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Basic procedural animations</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
@@ -151,10 +155,9 @@
                 <tr><td id = "DropdownElement" class = "content">
                     Whenever objects are spawned in this project, object pooling is used. This is a technique where objects are never despawned, but placed<br>
                     outside of the players view, and stored. This means that when they are 'spawned' they are just moved to a position. This technique<br>
-                    helps save performance, as creating objects, especially at a large scale, can cause lag, while functionally providing a similar<br>
-                    result to object pooling.<br>
-                    <i-- put a video of how the object pool works--></i-->
-                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe>
+                    helps save performance, as creating objects at runtime, especially at a large scale, can cause lag, while functionally providing<br>
+                    a similar result to object pooling.<br>
+                    <image src="/Resources/Images/Nines escape/SpawnedActors.png" width="750" height="350" class="DropdownMargin" title="Image showing object that is stored outside of the map after being 'deleted'"></image>
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Non-Programming content</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
