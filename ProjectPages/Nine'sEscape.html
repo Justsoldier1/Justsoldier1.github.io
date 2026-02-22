@@ -86,7 +86,6 @@
                     player can try to beat the time, rather than just beating the level and never having a reason to revisit it. The system just looks<br> 
                     at the saved time, and the time of the level timer, and overwrites the saved time if the level timer has been running for less time.<br>
                     <small>Saved time being overwritten:</small><br>
-                    <i-- Will contain a video showing the saved time being overwritten--></i-->
                     <iframe src="https://youtube.com/embed/0Bf-s9cG-cU" class="DropdownVideo" allowfullscreen></iframe><br>
                 </td></tr>
 
@@ -132,8 +131,14 @@
                     <image src="/Resources/Images/Nines escape/Nine's escape behaviour tree_HigherQuality_Cropped.png" width="1750px" height="440px" class="DropdownMargin" title="A large scale overview of the behaviour tree for my project"></image><br></br>
                     The AI enemy found in the final level of this project was created using a behaviour tree. This allows for the agent (the character<br>
                     controlled by the AI) to select which 'branch' of code to run depending on the data held in the agent's blackboard.<br>
-                    <image src="/Resources/Images/Nines escape/Nine's escape blackboard.png" width="750" height="300" class="DropdownMargin" title="The blackboard used for the AI agent from the final level"></image>
-
+                    <image src="/Resources/Images/Nines escape/Nine's escape blackboard.png" width="750" height="300" class="DropdownMargin" title="The blackboard used for the AI agent from the final level"></image><br>
+                    The behaviour tree has two parent branches, which are FoundPlayer and NoPlayer. These both check whether the player variable is valid<br>
+                    within the blackboard, and runs the appropriate branch.<br>
+                    If the player is valid, the agent will move towards the player, and check to ensure that the player can still be seen. This is done<br>
+                    using the perception component, which is held within the AI controller. Then finally, if the player can still be seen, then a<br>
+                    projectile is shot at the agent's front facing arrow component.<br>
+                    <small>Found player behaviour in game:</small><br>
+                    <iframe src="https://www.youtube.com/embed/7tVZ1FSLFIw" class="DropdownVideo" allowfullscreen></iframe><br>
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Basic procedural animations</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
