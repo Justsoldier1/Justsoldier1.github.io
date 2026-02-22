@@ -134,6 +134,15 @@ a.ClearWhiteAnchor:hover{
     border-color:lightgray;
 }
 
+.Logo{
+
+}
+
+.ProjectPreview{
+    width:525px;
+    height:450px;
+}
+
 .BorderedTable{
     background-color: black;
 }
