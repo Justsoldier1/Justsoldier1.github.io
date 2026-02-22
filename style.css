@@ -70,19 +70,12 @@ a.ClearWhiteAnchor:hover{
 
 .ImageHover:hover{
     transform:scale(1.1,1.1);
-    border-width:2px;
-    border-radius:5px;
-    border-color:lightgray;
-    border-style:none;
     animation:ImageHovering;
     animation-duration:0.25s;
 }
 
 .ImageHover:not(:hover){
     transform:scale(1,1);
-    border-width:0px;
-    border-radius:0px;
-    border-style:none;
     animation:ImageHovering;
     animation-duration:0.25s;
     animation-direction:reverse;
@@ -102,18 +95,10 @@ a.ClearWhiteAnchor:hover{
 @keyframes ImageHovering{
     from{
         transform: scale(1,1);
-        border-width:0px;
-        border-radius:0px;
-        border-color:lightgray;
-        border-style:none;
     }
 
     to{
         transform:scale(1.1,1.1);
-        border-width:2px;
-        border-radius:5px;
-        border-color:lightgray;
-        border-style:solid;
     }
 }
 
@@ -135,11 +120,12 @@ a.ClearWhiteAnchor:hover{
 }
 
 .Logo{
-
+    width:175px;
+    height:150px;
 }
 
 .ProjectPreview{
-    width:525px;
+    width:500px;
     height:450px;
 }
 
