@@ -15,7 +15,9 @@ bool iswatchlink = true;
 
 //functions
 std::string removeyoutubeprefix(std::string input);
+std::string removeyoutubewatchprefix(std::string input);
 std::string insertwww(std::string input);
+std::string removewatchsuffix(std::string input);
 /// <summary>
 /// Gets the type of youtube link
 /// </summary>
@@ -40,14 +42,16 @@ int main()
 
     //getting the link type
     iswatchlink = getlinktype(convertedlink);
+
     if (iswatchlink) {
-        std::cout << " Is watch link: true\n";
+		convertedlink = removeyoutubewatchprefix(convertedlink);
+		convertedlink = removewatchsuffix(convertedlink);
     }
     else {
-        std::cout << " Is watch link: false\n";
+		convertedlink = removeyoutubeprefix(convertedlink);
     }
-    //convertedlink = removeyoutubeprefix(convertedlink);
-    //convertedlink = embedprefix + convertedlink;
+   
+    convertedlink = embedprefix + convertedlink;
     std::cout << "Converted link: " + convertedlink;
 
 }
@@ -63,22 +67,30 @@ std::string insertwww(std::string input) {
 }
 
 bool getlinktype(std::string input) {
-    std::string period = ".";
-    int periodnumber = 0;
-    //checking for the . in youtube
-    for (int i = 0; i < 19; i++) {
-        if (input[i] == period[0]) {
-            periodnumber++;
-        }
-    }
-    bool iswatch = periodnumber == 2;
-    return iswatch;
+    
+	return input.find("watch") != std::string::npos;
 }
 
 std::string removeyoutubeprefix(std::string input) {
     //removing the standard youtube prefix
-    for (int i = 0; i < 17; i++) {
+    for (int i = 0; i < 21; i++) {
         input[i] = NULL;
     }
+    return input;
+}
+
+std::string removeyoutubewatchprefix(std::string input) {
+    //removing the standard youtube prefix
+    for (int i = 0; i < 33; i++) {
+        input[i] = NULL;
+    }
+    return input;
+}
+
+std::string removewatchsuffix(std::string input) {
+	int suffixstart = input.find("&");
+    for(int i = suffixstart; i < input.length(); i++) {
+        input[i] = NULL;
+	}
     return input;
 }
