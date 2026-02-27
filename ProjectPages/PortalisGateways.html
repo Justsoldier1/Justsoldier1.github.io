@@ -41,7 +41,28 @@
                 <tr><td id = "DropdownElement" class = "content">
                     Within this project, weapons can be saved using the ‘Vault’, which is an area of the map accessible in between waves.<br>
                     <image src="/Resources/Images/Portalis Gateways/Vault Area.png" width="375px" height="250px" class="DropdownMargin" title="Image showcasing the vault area"></image><br>
-                    
+                    The vault is made up of two game objects. These are vault borders, and shelf slots. Vault borders where added to prevent a bug, where<br>
+                    weapons could be thrown through walls that are not walkable, meaning that the player could easily lose their weapons within the<br>
+                    vault. Vault borders just check if a weapon enters its bounds using the OnTriggerEnter2D function, and sets it's position to the<br>
+                    centre of the vault.<br>
+                    <small>Video showing the weapon throwing bug, and the vault borders in action:</small><br>
+                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe>
+                    The second game object used for managing the vault is a lot more important. These are the shelf slots, which handle holding the<br>
+                    objects, aswell as saving them to a file. When an object is thrown onto a shelf, it has it's spin effect stopped, as it would look<br>
+                    strange to have a spinning weapon on a shelf.<br>
+                    <small>Video showing what spinning weapons on a shelf would look like:</small><br>
+                    <iframe src="" class="DrodpownVideo" allowfullscreen></iframe><br>
+                    Then, the weapon is marked as being on a shelf, which means that it cannot despawn. The shelf is also set that it contains an item, so<br>
+                    that no other items can be placed onto the shelf.  I then finally snap the object to the shelf's position, so that it is centered<br>
+                    properly.<br>
+                    The weapon have some velocity when thrown however, so they would move away from the shelf. Before, I created a coroutine that would<br>
+                    set the weapon back to the shelf position after 0.5 seconds, but this looked buggy and strange. Instead, I chose to manually reset<br>
+                    the velocity when it hits, which worked very well. I still kept the old system in case the object did not have a 2D rigid body<br>
+                    however.<br>
+                    <small>Shelves holding weapons:</small><br>
+                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe>
+                    <i-- discuss how the vault prevents the player from leaving if certain conditions are not met after talking about saving--></i-->
+                    <i-- should this be in it's own section?--></i-->
                 </td></tr>
         </table>
     </div>
