@@ -37,6 +37,10 @@
     <i-- info dropdowns--></i-->
     <div>
         <table class="DropdownTable">
+                <tr><td><button class="DropdownTitle">Weapon system</button></td></tr>
+                <tr><td id = "DropdownElement" class = "content">
+                    Here I will dicuss the weapon system, and how they are just integers that set parameters within the player.
+                </td></tr>
                 <tr><td><button class="DropdownTitle">Weapon save system</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
                     Within this project, weapons can be saved using the ‘Vault’, which is an area of the map accessible in between waves.<br>
@@ -61,8 +65,15 @@
                     however.<br>
                     <small>Shelves holding weapons:</small><br>
                     <iframe src="" class="DropdownVideo" allowfullscreen></iframe>
-                    <i-- discuss how the vault prevents the player from leaving if certain conditions are not met after talking about saving--></i-->
-                    <i-- should this be in it's own section?--></i-->
+                    The weapons would then be stored while the game is in progress but will be deleted when the game is restarted. As the different<br>
+                    weapons just store different integers (see the weapon system section) I can just write this value to a text file. However, I could not<br>
+                    get the hang of reading multiple lines within a text file, so I needed to find a solution to store more than one weapon.<br>
+                    <image src="" class="DropdownImage" title="Weapons are saved as integers"></image>
+                    <i--> Explain the index system used for finding the related txt file</i-->
+                </td></tr>
+                <tr><td><button class="DropdownTitle">Gameplay loop</button></td></tr>
+                <tr><td id = "DropdownElement" class = "content">
+                    Here I will dicuss the wave system, and the conditions to enter/exit the vault.
                 </td></tr>
         </table>
     </div>
