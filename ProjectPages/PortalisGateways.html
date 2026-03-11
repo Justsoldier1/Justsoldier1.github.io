@@ -39,23 +39,36 @@
         <table class="DropdownTable">
                 <tr><td><button class="DropdownTitle">Weapon system</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
-                    Here I will dicuss the weapon system, and how they are just integers that set parameters within the player.
+                    Weapons within my project are quite simple, as they mostly just change the parameters based around shooting. For example, the assault<br>
+                    rifle just increases the speed and damage of the projectiles, and increases the time between shots. Because these variables were<br>
+                    all natively set within the player controller, I could just make the weapon a switch case, which would set these parameters based<br>
+                    upon which weapon was selected. To make this simpler to use, I used integers to store which weapon was selected.<br>
+                    <small>Showcase of weapon behaviours:</small><br>
+                    <image src="" class="DropdownImage" title="Video showing how the different guns behave"></image><br>
+                    The most unique weapon within the arsenal included in the game is the rocket launcher. This is because it changes what prefab is<br>
+                    fired, which lets the bullet explode on contact, dealing area of effect damage.<br>
+                    <small>Rocket launcher gameplay:</small><br>
+                    Since I had the vault system in mind, I decided to not include any form of inventory system within the game. Because of this, I needed<br>
+                    to create a separate way to change weapons. I decided to create weapon pickups, that would be created when the player throws out<br>
+                    their weapon. I added some velocity when this happens to further sell the idea of throwing out your weapon.<br>
+                    
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Weapon save system</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
                     Within this project, weapons can be saved using the ‘Vault’, which is an area of the map accessible in between waves.<br>
+                    <small>The vault area in my project:</small><br>
                     <image src="/Resources/Images/Portalis Gateways/Vault Area.png" width="375px" height="250px" class="DropdownMargin" title="Image showcasing the vault area"></image><br>
                     The vault is made up of two game objects. These are vault borders, and shelf slots. Vault borders where added to prevent a bug, where<br>
                     weapons could be thrown through walls that are not walkable, meaning that the player could easily lose their weapons within the<br>
                     vault. Vault borders just check if a weapon enters its bounds using the OnTriggerEnter2D function, and sets it's position to the<br>
                     centre of the vault.<br>
                     <small>Video showing the weapon throwing bug, and the vault borders in action:</small><br>
-                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe>
+                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
                     The second game object used for managing the vault is a lot more important. These are the shelf slots, which handle holding the<br>
-                    objects, aswell as saving them to a file. When an object is thrown onto a shelf, it has it's spin effect stopped, as it would look<br>
-                    strange to have a spinning weapon on a shelf.<br>
+                    objects, aswell as saving them to a file. When an object is thrown onto a shelf, it sets it's position to match the shelfs. It also has<br>
+                    it's spin effect stopped, as it would look strange to have the weapon be moving while stored onto a shelf.<br>
                     <small>Video showing what spinning weapons on a shelf would look like:</small><br>
-                    <iframe src="" class="DrodpownVideo" allowfullscreen></iframe><br>
+                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
                     Then, the weapon is marked as being on a shelf, which means that it cannot despawn. The shelf is also set that it contains an item, so<br>
                     that no other items can be placed onto the shelf.  I then finally snap the object to the shelf's position, so that it is centered<br>
                     properly.<br>
@@ -64,12 +77,18 @@
                     the velocity when it hits, which worked very well. I still kept the old system in case the object did not have a 2D rigid body<br>
                     however.<br>
                     <small>Shelves holding weapons:</small><br>
-                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe>
+                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
                     The weapons would then be stored while the game is in progress but will be deleted when the game is restarted. As the different<br>
                     weapons just store different integers (see the weapon system section) I can just write this value to a text file. However, I could not<br>
                     get the hang of reading multiple lines within a text file, so I needed to find a solution to store more than one weapon.<br>
+                    <small>Image that displays the integer weapon saving system:</small><br>
                     <image src="" class="DropdownImage" title="Weapons are saved as integers"></image>
-                    <i--> Explain the index system used for finding the related txt file</i-->
+                    To create different weapons, I created an integer variable for the shelf. This would determine which file that the weapon data would<br>
+                    be contained inside. Then I could just construct the file path using string addition, and when using StreamWriter.WriteLine, it will<br>
+                    either write to a text file if there is one at that location, or create one there to be written into. I can then do the same thing<br>
+                    to read from this file when the map loads to place the necessary guns (if any at all) into the vault.<br>
+                    <small> The vault saving weapons between games:</small><br>
+                    <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Gameplay loop</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
