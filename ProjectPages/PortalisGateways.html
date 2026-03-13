@@ -94,7 +94,36 @@
                 </td></tr>
                 <tr><td><button class="DropdownTitle">Gameplay loop</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
-                    Here I will dicuss the wave system, and the conditions to enter/exit the vault.
+                    The game runs with a wave system. When the player spawns in, random enemies spawn at set positions on the map. The enemies spawned are<br>
+                    determined by an array within the enemy manager singleton.<br>
+                    <small>Enemy spawn positions visualised:</small><br>
+                    <image src="" class="DropdownImage" title="Places where enemies can spawn on the map"></image><br>
+                    When an enemy dies, it updates the enemy count variable, which is stored within the level exit and vault portals. This lets me make<br>
+                    vault and the level exit only be available when the enemy count is 0. This was always planned for the level exit portal, but the<br>
+                    vault being locked behind beating the wave was an addition made within the project's development, as I realised that the player<br>
+                    could abuse the vault to stall the battles within the game.<br>
+                    <small>The vault and level exit portals are locked until the wave is over:</small><br>
+                    <iframe src="" class="DrodpownVideo" allowfullscreen></iframe><br>
+                </td></tr>
+                <tr><td><button class="DropdownTitle">Parry mechanic</button></td></tr>
+                <tr><td id = "DropdownElement" class = "content">
+                  Within this project, a bit inspiration was the game Ultrakill. Specifically, I wanted to create something similar to the parry<br>
+                  mechanic, as it was one of the best implementations of parrying, and had some interesting interactions that I felt would work well to give<br>
+                  the player an extra move to use within gameplay.<br>
+                  <small>The parry mechanic in Ultrakill:</small><br>
+                  <iframe src="https://www.youtube.com/embed/I-ifPFF7EJE" class="DropdownVideo" allowfullscreen></iframe><br>
+                  When the parry button is pressed, if the parry is not on cooldown, the parry object is activated. This is an object connected to the<br>
+                  player that rotates towards the mouse, so that it follows where the player is looking. The parry object has a disabled collider,<br>
+                  that will only be activated during the parry window (0.5 seconds). This is shown visually to the player with a portal sprite. The idea<br>
+                  for this was that the character creates a portal in front of themselves, that redirects the attack.<br>
+                  <small>Parry object activating:</small><br>
+                  <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
+                  When a projectile hits the parry object's collider, it first has it's sprite changed, so that the player knows it has been parried. It<br>
+                  is then set to damage enemies, and is set to cause an explosion on impact. Originally, I then reversed it's velocity, but this<br>
+                  gave the player less control over where the projectiles will go, so I instead made their velocity move in the direction of the<br>
+                  player's mouse.<br>
+                  <small>Showcase of the old and new parry velocities for projectiles:</small><br>
+                  <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
                 </td></tr>
         </table>
     </div>
