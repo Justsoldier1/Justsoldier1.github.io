@@ -227,3 +227,28 @@ a.ClearWhiteAnchor:hover{
     margin-bottom:0.5em;
     border-radius:5px;
 }
+
+/*Provides reasonable spacing between subjects*/
+.Spacing{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+/* Centers Text within this class*/
+.CenterText{
+    text-align:center;
+}
+
+/*Centers tables*/
+.CenterTable{
+    margin:0px auto;
+}
+
+/*Centers other objects within this class that are not text or tables*/
+.Center{
+    display:block;
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
