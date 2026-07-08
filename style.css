@@ -24,12 +24,10 @@ A.AboutLink:hover{
     animation-fill-mode:forwards;
 }
 
-A.AboutLink:hover{
+A.AboutLink:not(:hover){
     font-size:large;
-    animation:NormalHover;
+    animation:StopNormalHover;
     animation-duration:0.25s;
-    animation-direction:reverse;
-    animation-fill-mode:backwards;
 }
 
 .ClearWhiteAnchor{
@@ -47,25 +45,21 @@ a.ClearWhiteAnchor:hover{
 
 .ClearWhiteAnchor:not(:hover){
     font-size:normal;
-    animation:LargeHover;
+    animation:StopLargeHover;
     animation-duration:0.25s;
-    animation-direction:reverse;
-    animation-fill-mode:backwards;
 }
 
 .HoverAnim:hover{
-    font-size:normal;
+    font-size:large;
     animation:NormalHover;
     animation-duration:0.25s;
     animation-fill-mode:forwards;
 }
 
 .HoverAnim:not(:hover){
-    font-size:larger;
-    animation:NormalHover;
+    font-size:normal;
+    animation:StopNormalHover;
     animation-duration:0.25s;
-    animation-direction:reverse;
-    animation-fill-mode:backwards;
 }
 
 .ImageHover:hover{
@@ -76,20 +70,40 @@ a.ClearWhiteAnchor:hover{
 
 .ImageHover:not(:hover){
     transform:scale(1,1);
-    animation:ImageHovering;
+    animation:StopImageHovering;
     animation-duration:0.25s;
-    animation-direction:reverse;
-    animation-fill-mode:backwards;
 }
 
 @keyframes NormalHover{
     from{font-size:normal;}
-    to{font-size:larger;}
+    to{font-size:large;}
+}
+
+@keyframes StopNormalHover{
+    from{
+        font-size:large;
+    }
+    to{
+        font-size:normal;
+    }
 }
 
 @keyframes LargeHover{
-    from{font-size:large;}
-    to{font-size:larger;}
+    from{
+        font-size:large;
+    }
+    to{
+        font-size:larger;
+    }
+}
+
+@keyframes StopLargeHover{
+    from{
+        font-size:larger;
+    }
+    to{
+        font-size:large;
+    }
 }
 
 @keyframes ImageHovering{
@@ -99,6 +113,16 @@ a.ClearWhiteAnchor:hover{
 
     to{
         transform:scale(1.1,1.1);
+    }
+}
+
+@keyframes StopImageHovering{
+    from{
+        transform:scale(1.1,1.1);
+    }
+
+    to{
+        transform:scale(1,1);
     }
 }
 
@@ -122,6 +146,10 @@ a.ClearWhiteAnchor:hover{
 .Logo{
     width:175px;
     height:150px;
+    margin-top:0.75em;
+    margin-bottom:0.75em;
+    margin-left:0.75em;
+    margin-right:0.75em;
 }
 
 .ProjectPreview{
@@ -180,6 +208,7 @@ a.ClearWhiteAnchor:hover{
     font-weight: bolder;
     font-size:large;
     opacity:1;
+    transform-origin:center;
 }
 
 .DropdownTitle:hover{
@@ -188,11 +217,9 @@ a.ClearWhiteAnchor:hover{
     animation-fill-mode:forwards;
 }
 
-.DropdownTtitle:not(:hover){
-    animation:LargeHover;
-    animation-duration:0,25s;
-    animation-fill-mode:backwards;
-    animation-direction:reverse;
+.DropdownTitle:not(:hover){
+    animation:StopLargeHover;
+    animation-duration:0.25s;
 }
 
 
@@ -209,8 +236,8 @@ a.ClearWhiteAnchor:hover{
 .DropdownImage{
     width:750px;
     height:250px;
-    margin-top:0.5em;
-    margin-bottom:0.5em;
+    margin-top:0.75em;
+    margin-bottom:0.75em;
     border-radius:5px;
 }
 
