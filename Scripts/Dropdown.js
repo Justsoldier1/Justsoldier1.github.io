@@ -9,11 +9,17 @@ for(i = 0; i < elements.length;i++){
         if(position <= childelements.length){
             
             var sibling = childelements[position];
+            //setting object display type
             if(sibling.style.display != "block"){
                 sibling.style.display = "block";
             }else{
                 sibling.style.display = "none";
             }
+
+            //object animation
+            sibling.classList.remove("DropdownContentAnimation");
+            sibling.classList.add("DropdownContentAnimation");
+
         }else{
             console.log("ammount of titles does not match ammount of elements. Elements is " + elements.length + "while childelements is: " + childelements.length);
         }
