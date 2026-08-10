@@ -72,14 +72,24 @@
                         
                         <small>Button showcase:</small><br>
                         <iframe src="https://www.youtube.com/embed/CVpMu6GlX40" class="DropdownVideo" allowfullscreen></iframe><br>
+
                         <big>Event based programming</big><br>
-                        Another focus within this project was to use the event-based programming pattern. This means that certain functions were only called<br>
-                        when necessary in code, instead of using tick to check for a condition every frame. This leads to a boost in performance, with less<br>
-                        redundant operations being completed.<br>
-                        To keep to this pattern, I mainly used collisions, with either line traces or actual colliders triggering overlap events in actors.<br>
-                        This can be seen in the push and pull mechanics, where capsule traces where used to apply a force onto game objects in front of the player.<br>
-                        <small>Line trace used for pushing and pulling:</small><br>
-                        <image src="" class="DropdownImage" title="Image showing a capsule trace in Unreal engine"></image><br>
+                        A programming technique that I always attempt to avoid as much as possible is the tick / update technique.<br>
+                        This involves running certain checks, such as whether or not the player is grounded, every frame the game<br>
+                        runs. I avoid this technique as there are many much more effective methods to get the same effect, such as<br>
+                        overlap events or timers, without needing to run redundant or unnecessary code. For example, the gravity<br>
+                        direction UI element could get the direction of the wall in front of player using tick, but instead I have a<br>
+                        capsule collision component facing out of the player, and when it overlaps with a wall, it gets the<br>
+                        gravity direction. This scales down the number of operations for this UI element from thousands, to just one.<br>
+
+                        <small>Gravity direction UI element:</small><br>
+                        <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
+
+                        For some use cases however, I need to check things very frequently. To do this, instead of using tick, I<br>
+                        instead use a timer that runs every 0.01 seconds. This emulates the accuracy of tick, but with the added<br>
+                        functionality of being toggleable, so I can stop it from running when it is not needed. Because of these<br>
+                        alternative methods, tick was not used in any of my code created for this project.<br>
+
                 </td></tr>
 
                 <tr><td><button class="DropdownTitle">Components</button></td></tr>
