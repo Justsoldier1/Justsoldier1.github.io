@@ -212,36 +212,52 @@ a.ClearWhiteAnchor:hover{
     animation-timing-function:ease-out;
     transform-origin:top;
     transform:scale(1.0,1.0);
+    display:block;
 }
 
 @keyframes DropdownAnimation{
     0%{
         transform:scaleY(0.0);
         transform:scaleX(0.0);
+        display:none;
+    }
+    1%{
+        display:block;
     }
 
     25%{
         transform:scaleX(1.0);
     }
 
-    35%{
-        transform:sacleY(1);
-    }
-
-    50%{
-        transform:scaleY(0.75);
-    }
-
-    75%{
+    100%{
         transform:scaleY(1.0);
     }
+}
 
-    90%{
-        transform:scaleY(0.85);
+.DropdownContentReverseAnimation{
+    animation:DropdownReverseAnimation;
+    animation-duration:0.25s;
+    animation-timing-function:ease-out;
+    transform-origin:top;
+    transform:scale(0.0,0.0);
+    display:none;
+}
+
+@keyframes DropdownReverseAnimation{
+    0%{
+        transform:scaleY(1.0);
+        transform:scaleX(1.0);
+        display:block;
+    }
+
+    25%{
+        transform:scaleY(0.01);
     }
 
     100%{
-        transform:scaleY(1.0);
+        transform:scaleX(0.0);
+        transform:scaleY(0.0);
+        display:none;
     }
 }
 

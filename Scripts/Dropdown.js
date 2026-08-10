@@ -10,15 +10,15 @@ for(i = 0; i < elements.length;i++){
             
             var sibling = childelements[position];
             //setting object display type
-            if(sibling.style.display != "block"){
-                sibling.style.display = "block";
+            //GetComputedStyle shows css related style changes
+            if(getComputedStyle(sibling).display != "block"){
+                 //play dropdown animation
+                 sibling.classList.remove("DropdownContentReverseAnimation");
+                 sibling.classList.add("DropdownContentAnimation");
             }else{
-                sibling.style.display = "none";
+                 //play reverse dropdown animation
+                 sibling.classList.add("DropdownContentReverseAnimation");
             }
-
-            //object animation
-            sibling.classList.remove("DropdownContentAnimation");
-            sibling.classList.add("DropdownContentAnimation");
 
         }else{
             console.log("ammount of titles does not match ammount of elements. Elements is " + elements.length + "while childelements is: " + childelements.length);
