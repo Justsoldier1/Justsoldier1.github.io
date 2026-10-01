@@ -42,10 +42,11 @@
                 based off of the character Nine from my favourite book series that I was re-reading at the time,<br
                 >called 'I am Number Four'.<br></td></tr>
             <br>
-            <tr class ="CyanTable CenterText"><td> The basic plan for the game was to create a robot replica of him, since I am better at hard surface<br>
-                modelling, and allow the player to use his abilities to solve puzzles. The abilities where all<br>
+            <tr class ="CyanTable CenterText"><td>  The basic plan for the game was to create a robot replica of him, since I am better at hard surface<br>
+                modelling, and allow the player to use his abilities to solve puzzles. The abilities were all<br>
                 centered around gravity. The primary ability was switching gravity when touching walls, and the secondary<br>
-                ability was being able to push and pull objects. These will be discussed in more detail below.<br></td></tr>
+                ability was being able to push and pull objects. These will be discussed in more detail<br>
+                 in the ‘Gravity system’ and ‘character abilities’ sections below.<br></td></tr>
         </table>
     </div>
     <br>
@@ -53,20 +54,20 @@
     <div>
         <table class="DropdownTable CenterTable">
                 <tr><td><button class="DropdownTitle">Programming style / methods</button></td></tr>
-                <tr><td id = "DropdownElement" class = "content">
+                <tr><td id = "DropdownElement" class = "content" style="">
                         <big>Casting</big><br>
                         A common problem I had to solve within this project was accessing information from a different class than the<br>
                         one I was currently working in. Within Unreal engine, casting would normally be used here, but this can<br>
                         cause high memory usage when used at a large scale. This wouldn't really have an impact on the performance<br>
                         of my project, as there was not a lot of interaction occurring at once, but I wanted to use the more<br>
-                        optimised method, interfaces, so that I get in the habit of using interfaces, which will ensure that my work on<br>
+                        optimised method, interfaces, so that I get in the habit of using them, which will ensure that my work on<br>
                         larger projects in this future is as optimised as possible.<br><br>
                         
                         Another advantage of using interfaces is that they can be used with high level references. This means that<br>
-                        they are not linked to a single class and instead work with any class that implements the interface<br>
+                        they are not linked to a single class and instead work with any actor that implements the interface<br>
                         function. This helps stop my classes from being coupled together, which can help prevent unneeded dependencies. An<br>
                         example of this is within the BP_Button actor. Instead of needing specific class types, it can just hold<br
-                        >a reference to linked classes within the actor class, and attempt to call the interact function on them.<br>
+                        >a reference to linked classes that inherit the actor class, and attempt to call the interact function on them.<br>
                         Using this method, if the linked actor does not have the correct function, instead of causing errors, the<br>
                         function will just not be called.<br> <br>
                         
@@ -78,17 +79,17 @@
                         This involves running certain checks, such as whether or not the player is grounded, every frame the game<br>
                         runs. I avoid this technique as there are many much more effective methods to get the same effect, such as<br>
                         overlap events or timers, without needing to run redundant or unnecessary code. For example, the gravity<br>
-                        direction UI element could get the direction of the wall in front of player using tick, but instead I have a<br>
-                        capsule collision component facing out of the player, and when it overlaps with a wall, it gets the<br>
-                        gravity direction. This scales down the number of operations for this UI element from thousands, to just one.<br>
+                        direction UI element could get the direction of the wall in front of player every frame using a raycast, but<br>
+                        instead I have a capsule collision component facing out of the player, and when it overlaps with a wall, it gets<br>
+                        the gravity direction.<br>
 
                         <small>Gravity direction UI element:</small><br>
                         <iframe src="" class="DropdownVideo" allowfullscreen></iframe><br>
 
                         For some use cases however, I need to check things very frequently. To do this, instead of using tick, I<br>
                         instead use a timer that runs every 0.01 seconds. This emulates the accuracy of tick, but with the added<br>
-                        functionality of being toggleable, so I can stop it from running when it is not needed. Because of these<br>
-                        alternative methods, tick was not used in any of my code created for this project.<br>
+                        functionality of being toggleable, so I can stop it from running when it is not needed. <p class="note">look <br>
+                        into where this was used in engine</p><br>
 
                 </td></tr>
 
@@ -99,14 +100,15 @@
                     that had a maximum and a minimum amount, that would be clamped to stop the integer exceeding these limits.<br>
                     <small>Ammo component and its uses in the project:</small><br>
                     <iframe src="https://www.youtube.com/embed/lDBeggN0LLI" class="DropdownVideo" allowfullscreen></iframe><br>
+                    <p class="Note">look for other instances of component usage within the project</p>
                 </td></tr>
 
                 <tr><td><button class="DropdownTitle">Save system</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">
-                    Since this game was based around puzzle solving, and was inspired a lot by portal, I decided that it would be important to add a save<br>
-                    system, where levels can be saved as beat so that the player can progress within multiple sittings. This was something I had<br>
-                    attempted in a previous project using game instances, which saves data between levels, but this had some problems with not saving data<br>
-                    when closing and reopening the game.<br>
+                    When creating a linear level based game such as this, it is important that the player’s progress is saved,<br>
+                    so that they do not need to restart from level 1 everytime they close the game. I had made a basic save system<br>
+                    before using game instances, but these only save variables while the game is running, and once the game closes all<br>
+                    data is destroyed.<br>
                     <small>Data is reset when the game is closed:</small><br>
                     <iframe src="https://www.youtube.com/embed/kzuWOsKuzq0" class="DropdownVideo" allowfullscreen></iframe><br>
                     To fix this, I used a save game actor, which is a built in class within Unreal Engine that saves It's data to a file. To ensure I could<br>
@@ -158,6 +160,11 @@
                     movement methods. For the camera, I had to manually rotate it instead of using Unreal's built In functions. This also meant that for the<br>
                     movement script I had to use the cameras forward and right vectors, instead of the actors, as the camera would be offset by the<br>
                     move code.<br>
+                </td></tr>
+                <tr><td><button class="DropdownTitle">Character abilities</button></td></tr>
+                <tr><td id="DropdownElement" class="content">
+                    <big>Title</big><br>
+                    Content
                 </td></tr>
                 <tr><td><button class="DropdownTitle">AI Behaviour tree</button></td></tr>
                 <tr><td id = "DropdownElement" class = "content">

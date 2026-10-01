@@ -1,3 +1,10 @@
+/*Useful css attributes
+
+    text-transform:uppercase; forces the text within the class to be uppercase. This can also be used to do the same thing for lowercase text
+    font-weight:bold; used to set how bold text is
+*/
+
+
 body{
     /*background:#202126;*/
     background:radial-gradient(#202126,#373D40,#4B5958);
@@ -343,4 +350,13 @@ a.ClearWhiteAnchor:hover{
     padding-right:15px;
     margin-left:auto;
     margin-right:auto;
+}
+
+/*testing class used to make notes in the website noticeable*/
+
+.Note{
+    font-size:larger;
+    color:red;
+    text-transform:uppercase;
+    font-weight:bolder;
 }
